@@ -1,5 +1,6 @@
 import Approach from "@/components/Approach";
 import Clients from "@/components/Clients";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
@@ -19,8 +20,9 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
-        <Clients />
+        {/* <Clients /> */}
         <Experience />
+        <Education />
         <Approach />
         <Footer />
       </div>
