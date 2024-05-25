@@ -1,9 +1,8 @@
-import React from "react";
-import MagicButton from "./ui/magic-button";
-import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa6";
+import MagicButton from "./ui/magic-button";
 
 const Footer = () => {
   return (
@@ -29,7 +28,7 @@ const Footer = () => {
 
       <div
         className="flex mt-16 md:flex-row flex-col justify-between 
-      items-center"
+      items-center gap-10 md:gap-0"
       >
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © {new Date().getFullYear()} Tharusha Perera
@@ -44,7 +43,7 @@ const Footer = () => {
               bg-opacity-100 bg-black-200 rounded-lg border 
               border-black-300 hover:opacity-80"
             >
-              <Link href={info.link}>
+              <Link href={info.link} target="_blank">
                 <Image src={info.img} alt="icons" width={20} height={20} />
               </Link>
             </div>

@@ -165,12 +165,12 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "",
+    link: "https://github.com/TharushaRehan",
   },
   {
     id: 3,
     img: "/link.svg",
-    link: "",
+    link: "https://www.linkedin.com/in/tharusha-perera/",
   },
 ];
 
