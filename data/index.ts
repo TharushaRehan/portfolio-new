@@ -1,21 +1,17 @@
-type ProjectType = ["Web App", "Mobile App"];
-
 type Project = {
   id: number;
-  type: ProjectType;
   title: string;
   des: string;
   img: string;
-  iconLists: Array<string>;
+  iconLists: string[];
   github: string;
   liveLink?: string;
-  mobileApp?: boolean;
-  webApp?: boolean;
 };
 
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Tech Stack", link: "#stack" },
   { name: "Work Experience", link: "#experience" },
   { name: "Education", link: "#education" },
   // { name: "Testimonials", link: "#testimonials" },
@@ -128,6 +124,58 @@ export const projects = [
   },
 ];
 
+export const webApps = [
+  {
+    id: 1,
+    title: "Notion Clone",
+    des: "I have developed a robust and versatile web application inspired by Notion, designed to enhance productivity and streamline note-taking and organization. This application incorporates several key features to provide a seamless user experience:",
+    features: [
+      {
+        title: "User Authentication (Clerk)",
+        des: "Secure user registration and login functionality to protect user data and personalize the experience.",
+      },
+      {
+        title: "Image Uploads (Edge Store)",
+        des: "Enhance your documents by uploading cover images and icons, providing a visually appealing and customized touch to your notes.",
+      },
+      {
+        title: "Dynamic Content Creation (BlockNote)",
+        des: "Utilize a block-based note editor to format text, insert images, embed links, and organize information in a flexible and interactive manner.",
+      },
+      {
+        title: "File Management",
+        des: "Create, edit, and manage documents efficiently, with the ability to structure content using an intuitive block-based editor.",
+      },
+    ],
+    img: "/notion-clone.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    github: "https://github.com/TharushaRehan/notion-clone",
+    liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Figma Clone",
+    des: "dsds",
+    features: [],
+    img: "/p1.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    github: "",
+    liveLink: "",
+  },
+];
+
+export const mobileApps = [
+  {
+    id: 1,
+    title: "Video Sharing App",
+    des: "dsdsds",
+    img: "/p1.svg",
+    iconLists: ["/re.svg", "/ts.svg"],
+    github: "https://github.com/TharushaRehan/notion-clone",
+    liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
+  },
+];
+
 export const workExperience = [
   {
     id: 1,
@@ -171,6 +219,116 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/tharusha-perera/",
+  },
+];
+
+export const techStack = [
+  {
+    label: "Programming Laguages",
+    icons: [
+      {
+        label: "Java",
+        img: "/java.svg",
+      },
+      {
+        label: "Python",
+        img: "/python.svg",
+      },
+      {
+        label: "Kotlin",
+        img: "/kotlin.svg",
+      },
+    ],
+  },
+  {
+    label: "Web Development",
+    icons: [
+      {
+        label: "HTML",
+        img: "/html.svg",
+      },
+      {
+        label: "CSS",
+        img: "/css.svg",
+      },
+      {
+        label: "JavaScript",
+        img: "/js.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "React.js",
+        img: "/re.svg",
+      },
+      {
+        label: "Next.js",
+        img: "/next.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+    ],
+  },
+  {
+    label: "Mobile Development",
+    icons: [
+      {
+        label: "React Native",
+        img: "/re.svg",
+      },
+      {
+        label: "Expo",
+        img: "/expo.svg",
+      },
+      {
+        label: "Kotlin",
+        img: "/kotlin.svg",
+      },
+    ],
+  },
+  {
+    label: "Backend Services",
+    description:
+      "Tools which provides authentication, database, storage and many more.",
+    icons: [
+      {
+        label: "Supabase",
+        img: "/supabase.svg",
+      },
+      {
+        label: "Firebase",
+        img: "/firebase.svg",
+      },
+    ],
+  },
+  {
+    label: "Other Tools",
+    icons: [
+      {
+        label: "Postman",
+        img: "/postman.svg",
+      },
+      {
+        label: "VS Code",
+        img: "/vs.svg",
+      },
+      {
+        label: "Android Studio",
+        img: "/as.svg",
+      },
+      {
+        label: "Vercel",
+        img: "/vercel-icon.svg",
+      },
+      {
+        label: "GitHub",
+        img: "/git.svg",
+      },
+    ],
   },
 ];
 

@@ -8,6 +8,7 @@ type Props = {
   position: string;
   handleClick?: () => void;
   otherClasses?: string;
+  containerClasses?: string;
 };
 
 const MagicButton = ({
@@ -16,11 +17,12 @@ const MagicButton = ({
   position,
   handleClick,
   otherClasses,
+  containerClasses,
 }: Props) => {
   return (
     <button
-      className="relative inline-flex h-12 w-full overflow-hidden 
-    rounded-lg p-[1px] focus:outline-none md:w-60 md:mt-10"
+      className={`relative inline-flex h-12 w-full overflow-hidden 
+    rounded-lg p-[1px] focus:outline-none md:w-60 md:mt-10 ${containerClasses}`}
       onClick={handleClick}
     >
       <span

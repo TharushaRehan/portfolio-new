@@ -1,11 +1,11 @@
 import Approach from "@/components/Approach";
-import Clients from "@/components/Clients";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
+import TechStack from "@/components/TechStack";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
 
@@ -20,6 +20,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <RecentProjects />
+        <TechStack />
         {/* <Clients /> */}
         <Experience />
         <Education />

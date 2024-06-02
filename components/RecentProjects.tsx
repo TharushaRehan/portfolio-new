@@ -1,10 +1,9 @@
 import { projects } from "@/data";
-import React from "react";
-import { PinContainer } from "./ui/3d-pin";
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./ui/magic-button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { FaLocationArrow } from "react-icons/fa6";
+import { PinContainer } from "./ui/3d-pin";
+import MagicButton from "./ui/magic-button";
 
 const RecentProjects = () => {
   return (
@@ -35,12 +34,7 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bg-img" />
                 </div>
-                <img
-                  src={img}
-                  alt={title}
-                  className="z-10 absolute 
-                bottom-0"
-                />
+                <img src={img} alt={title} className="z-10 absolute bottom-0" />
               </div>
               <h1
                 className="font-bold lg:text-2xl md:text-xl text-base
@@ -90,7 +84,7 @@ const RecentProjects = () => {
             title="Show All"
             icon={<ArrowRight />}
             position="right"
-            otherClasses=""
+            containerClasses="hover:opacity-50 transition-all duration-300"
           />
         </Link>
       </div>
