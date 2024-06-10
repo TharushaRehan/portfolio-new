@@ -24,6 +24,7 @@ const ProjectsPage = () => {
                 iconLists={item.iconLists}
                 github={item.github}
                 liveLink={item.liveLink}
+                tag={item.tag}
               />
             ))}
           </div>
@@ -42,7 +43,7 @@ const ProjectsPage = () => {
                 img={item.img}
                 iconLists={item.iconLists}
                 github={item.github}
-                liveLink={item.liveLink}
+                tag={item.tag}
               />
             ))}
           </div>

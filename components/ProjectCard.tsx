@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Feature {
@@ -15,6 +16,7 @@ interface Props {
   iconLists: string[];
   github: string;
   liveLink?: string;
+  tag: string;
 }
 
 const ProjectCard = ({
@@ -26,11 +28,21 @@ const ProjectCard = ({
   iconLists,
   github,
   liveLink,
+  tag,
 }: Props) => {
   return (
     <div key={id} className="border border-neutral-800 p-4 rounded-xl">
-      <div className="bg-[#13162d] pt-5 px-3 rounded-lg items-center justify-center flex">
-        <img src={img} alt={title} className="" />
+      <p className="border-2 rounded-2xl w-fit px-5 py-2 mb-5 bg-gradient-to-r from-purple to-70% to-blue-300 text-black font-medium">
+        {tag}
+      </p>
+      <div className="bg-[#13162d] p-3 rounded-xl items-center justify-center flex">
+        <Image
+          src={img}
+          alt={title}
+          className="w-full rounded-lg"
+          width={800}
+          height={800}
+        />
       </div>
       <div className="mt-5 space-y-4">
         <h3 className="text-xl md:text-2xl font-medium md:font-bold">
@@ -58,7 +70,13 @@ const ProjectCard = ({
                 transform: `translateX(-${5 * index * 2}px)`,
               }}
             >
-              <img src={icon} alt={icon} className="p-2" />
+              <Image
+                src={icon}
+                alt={icon}
+                className="p-2"
+                width={50}
+                height={50}
+              />
             </div>
           ))}
         </div>
@@ -68,15 +86,18 @@ const ProjectCard = ({
             <ArrowRight className="w-4 h-4" />
             <Link
               href={github}
-              className="border border-neutral-800 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center rounded-full"
+              className="border border-neutral-800 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center rounded-full hover:opacity-50 transition-all duration-300"
               target="_blank"
             >
-              <img src="/git.svg" alt="Github" />
+              <Image src="/git.svg" alt="Github" width={24} height={50} />
             </Link>
           </div>
           {liveLink && (
             <Link href={liveLink} target="_blank">
-              <p className="text-purple text-sm md:text-lg">Check Live Site</p>
+              <p className="text-purple text-sm md:text-lg hover:opacity-50 transition-all duration-300 flex items-center gap-2 hover:mr-2">
+                Check Live Site
+                <ArrowRight size={20} />
+              </p>
             </Link>
           )}
         </div>

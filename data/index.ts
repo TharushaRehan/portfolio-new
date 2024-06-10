@@ -135,6 +135,10 @@ export const webApps = [
         des: "Secure user registration and login functionality to protect user data and personalize the experience.",
       },
       {
+        title: "Database (Convex)",
+        des: "Manage users' documents seamlessly, providing robust and scalable database solutions for efficient data handling.",
+      },
+      {
         title: "Image Uploads (Edge Store)",
         des: "Enhance your documents by uploading cover images and icons, providing a visually appealing and customized touch to your notes.",
       },
@@ -151,16 +155,18 @@ export const webApps = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     github: "https://github.com/TharushaRehan/notion-clone",
     liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
+    tag: "Full-Stack",
   },
   {
     id: 2,
-    title: "Figma Clone",
+    title: "Blog Application",
     des: "dsds",
     features: [],
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     github: "",
     liveLink: "",
+    tag: "Front-End",
   },
 ];
 
@@ -172,7 +178,7 @@ export const mobileApps = [
     img: "/p1.svg",
     iconLists: ["/re.svg", "/ts.svg"],
     github: "https://github.com/TharushaRehan/notion-clone",
-    liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
+    tag: "Full-Stack",
   },
 ];
 
@@ -302,6 +308,10 @@ export const techStack = [
       {
         label: "Firebase",
         img: "/firebase.svg",
+      },
+      {
+        label: "Clerk",
+        img: "",
       },
     ],
   },

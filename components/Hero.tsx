@@ -85,7 +85,7 @@ const Hero = () => {
           </div>
 
           <div className="flex md:gap-10 md:flex-row gap-5 flex-col mt-4 md:mt-0">
-            <a href="#about">
+            <a href="#project">
               <MagicButton
                 title="Show my work"
                 icon={<FaArrowDown />}
