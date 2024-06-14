@@ -230,6 +230,7 @@ export const socialMedia = [
 
 export const techStack = [
   {
+    id: 1,
     label: "Programming Laguages",
     icons: [
       {
@@ -247,6 +248,7 @@ export const techStack = [
     ],
   },
   {
+    id: 2,
     label: "Web Development",
     icons: [
       {
@@ -277,9 +279,14 @@ export const techStack = [
         label: "Tailwind CSS",
         img: "/tail.svg",
       },
+      {
+        label: "Framer Motion",
+        img: "/framer.svg",
+      },
     ],
   },
   {
+    id: 3,
     label: "Mobile Development",
     icons: [
       {
@@ -297,6 +304,7 @@ export const techStack = [
     ],
   },
   {
+    id: 4,
     label: "Backend Services",
     description:
       "Tools which provides authentication, database, storage and many more.",
@@ -310,22 +318,19 @@ export const techStack = [
         img: "/firebase.svg",
       },
       {
+        label: "MongoDB",
+        img: "/mongodb.svg",
+      },
+      {
         label: "Clerk",
-        img: "",
+        img: "/clerk.webp",
       },
     ],
   },
   {
+    id: 5,
     label: "Other Tools",
     icons: [
-      {
-        label: "Postman",
-        img: "/postman.svg",
-      },
-      {
-        label: "VS Code",
-        img: "/vs.svg",
-      },
       {
         label: "Android Studio",
         img: "/as.svg",
@@ -335,8 +340,20 @@ export const techStack = [
         img: "/vercel-icon.svg",
       },
       {
+        label: "Stripe",
+        img: "/stripe.svg",
+      },
+      {
         label: "GitHub",
         img: "/git.svg",
+      },
+      {
+        label: "Postman",
+        img: "/postman.svg",
+      },
+      {
+        label: "VS Code",
+        img: "/vs.svg",
       },
     ],
   },

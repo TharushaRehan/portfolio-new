@@ -1,4 +1,3 @@
-import Approach from "@/components/Approach";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
@@ -24,7 +23,7 @@ export default function Home() {
         {/* <Clients /> */}
         <Experience />
         <Education />
-        <Approach />
+        {/* <Approach /> */}
         <Footer />
       </div>
     </main>
