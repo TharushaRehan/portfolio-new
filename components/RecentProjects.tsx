@@ -11,6 +11,8 @@ import { PinContainer } from "./ui/3d-pin";
 import MagicButton from "./ui/magic-button";
 
 const RecentProjects = () => {
+  const headerRef = useRef(null);
+  const headerIsInView = useInView(headerRef, { once: true });
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   //
@@ -18,10 +20,16 @@ const RecentProjects = () => {
   //
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading capitalize">
+      <motion.h1
+        ref={headerRef}
+        className="heading capitalize"
+        initial={{ x: "-20vw" }}
+        transition={{ type: "spring", stiffness: 20 }}
+        animate={headerIsInView ? { x: 0 } : "hidden"}
+      >
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
-      </h1>
+      </motion.h1>
       <div
         className="flex flex-wrap items-center justify-center p-4
       gap-x-24 gap-y-8 mt-10"
@@ -83,8 +91,7 @@ const RecentProjects = () => {
                       <div
                         key={icon}
                         className="border border-white/[0.2] rounded-full 
-                      bg-black lg:w-10 lg:h-10 w-8 h-8 flex 
-                      justify-center items-center"
+                      bg-black flex justify-center items-center"
                         style={{
                           transform: `translateX(-${5 * index * 2}px)`,
                         }}
@@ -92,9 +99,9 @@ const RecentProjects = () => {
                         <Image
                           src={icon}
                           alt={icon}
-                          className="p-2"
-                          width={50}
-                          height={50}
+                          width={10}
+                          height={10}
+                          className="w-10 h-10 p-2"
                         />
                       </div>
                     ))}

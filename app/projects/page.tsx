@@ -1,15 +1,27 @@
+"use client";
+
 import ProjectCard from "@/components/ProjectCard";
 import { mobileApps, webApps } from "@/data";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const ProjectsPage = () => {
+  const headerRef = useRef(null);
+  const headerIsInView = useInView(headerRef, { once: true });
   return (
-    <main className="py-20 relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip ">
-      <div className="max-w-7xl">
-        <h1 className="heading">
+    <main className="py-20 relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-20 px-5 overflow-clip ">
+      <div className="w-full">
+        <motion.h1
+          ref={headerRef}
+          className="heading capitalize"
+          initial={{ x: "-20vw" }}
+          transition={{ type: "spring", stiffness: 20 }}
+          animate={headerIsInView ? { x: 0 } : "hidden"}
+        >
           All <span className="text-purple">Projects</span>
-        </h1>
-        <div className="mt-20">
-          <h1 className="text-start font-bold text-xl md:text-2xl">
+        </motion.h1>
+        <div className="md:mt-20 mt-10">
+          <h1 className="text-center text-black-100 bg-gradient-to-r from-purple to-green-300 font-medium text-xl md:text-2xl py-2 rounded-xl w-full md:w-fit md:px-10">
             Web Applications
           </h1>
           <div className="mt-10 grid md:grid-cols-1 lg:grid-cols-2 gap-10">
@@ -29,11 +41,11 @@ const ProjectsPage = () => {
             ))}
           </div>
         </div>
-        <div className="mt-10">
-          <h1 className="text-start font-bold text-xl md:text-2xl">
+        <div className="md:mt-20 mt-10">
+          <h1 className="text-center text-black-100 bg-gradient-to-r from-purple to-green-300 font-medium text-xl md:text-2xl py-2 rounded-xl w-full md:w-fit md:px-10">
             Mobile Applications
           </h1>
-          <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
+          <div className="mt-10 grid md:grid-cols-1 lg:grid-cols-2 gap-10">
             {mobileApps.map((item) => (
               <ProjectCard
                 key={item.id}

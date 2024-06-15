@@ -1,8 +1,9 @@
 "use client";
 
 import { myRoles } from "@/data";
+import { useResizeObserver } from "@wojtekmaj/react-hooks";
 import Link from "next/link";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { FaArrowDown, FaLocationArrow } from "react-icons/fa6";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -29,10 +30,30 @@ const options = {
   standardFontDataUrl: "/standard_fonts/",
 };
 
+const resizeObserverOptions = {};
+
+const maxWidth = 1500;
+
 type PDFFile = string | File | null;
+
+//
+
+//
 const Hero = () => {
   const [file, setFile] = useState<PDFFile>("./Tharusha_Perera_CV_common.pdf");
   const [numPages, setNumPages] = useState<number>();
+  const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
+  const [containerWidth, setContainerWidth] = useState<number>();
+
+  const onResize = useCallback<ResizeObserverCallback>((entries) => {
+    const [entry] = entries;
+
+    if (entry) {
+      setContainerWidth(entry.contentRect.width);
+    }
+  }, []);
+
+  useResizeObserver(containerRef, resizeObserverOptions, onResize);
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);
@@ -99,31 +120,41 @@ const Hero = () => {
                   <FaLocationArrow className="ml-2" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="max-h-[90vh] overflow-scroll sm:max-w-[325px] md:max-w-fit">
+              <DialogContent className="max-h-[90vh] overflow-scroll sm:max-w-[600px] md:max-w-[1000px]">
                 <DialogHeader>
                   <Link href={"/Tharusha_Perera_CV_common.pdf"} target="_blank">
-                    <Button
-                      className="w-fit bg-transparent text-white-200 border border-white-200 rounded-full hover:bg-black-100"
-                      size={"sm"}
-                    >
+                    <Button className="w-fit rounded-full" size={"sm"}>
                       Download
                     </Button>
                   </Link>
                 </DialogHeader>
-                <Document
-                  file={file}
-                  options={options}
-                  onLoadSuccess={onDocumentLoadSuccess}
-                  className="mt-10"
-                >
-                  {Array.from(new Array(numPages), (el, index) => (
-                    <Page
-                      key={`page_${index + 1}`}
-                      pageNumber={index + 1}
-                      width={1000}
-                    />
-                  ))}
-                </Document>
+
+                <div className="Example">
+                  <div className="Example__container">
+                    <div
+                      className="Example__container__document"
+                      ref={setContainerRef}
+                    >
+                      <Document
+                        file={file}
+                        onLoadSuccess={onDocumentLoadSuccess}
+                        options={options}
+                      >
+                        {Array.from(new Array(numPages), (el, index) => (
+                          <Page
+                            key={`page_${index + 1}`}
+                            pageNumber={index + 1}
+                            width={
+                              containerWidth
+                                ? Math.min(containerWidth, maxWidth)
+                                : maxWidth
+                            }
+                          />
+                        ))}
+                      </Document>
+                    </div>
+                  </div>
+                </div>
               </DialogContent>
             </Dialog>
           </div>

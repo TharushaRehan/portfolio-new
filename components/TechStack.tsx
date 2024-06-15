@@ -50,9 +50,9 @@ const TechStack = () => {
                     <Image
                       src={icon.img}
                       alt={icon.label}
-                      width={20}
-                      height={20}
-                      className="w-6 h-6"
+                      width={10}
+                      height={10}
+                      className="w-10 h-10 border rounded-md p-2"
                     />
                     <span>{icon.label}</span>
                   </div>

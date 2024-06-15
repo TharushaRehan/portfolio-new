@@ -80,7 +80,7 @@ const ProjectCard = ({
             <div
               key={icon}
               className="border border-neutral-800 rounded-full 
-                      bg-black w-10 h-10 flex 
+                      bg-black flex 
                       justify-center items-center"
               style={{
                 transform: `translateX(-${5 * index * 2}px)`,
@@ -89,9 +89,9 @@ const ProjectCard = ({
               <Image
                 src={icon}
                 alt={icon}
-                className="p-2"
-                width={50}
-                height={50}
+                width={10}
+                height={10}
+                className="w-10 h-10 p-2"
               />
             </div>
           ))}
