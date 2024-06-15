@@ -1,6 +1,10 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 interface Feature {
   title: string;
@@ -30,8 +34,20 @@ const ProjectCard = ({
   liveLink,
   tag,
 }: Props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const side = id % 2 === 0 ? "-50vw" : "50vw";
+
   return (
-    <div key={id} className="border border-neutral-800 p-4 rounded-xl">
+    <motion.div
+      ref={ref}
+      key={id}
+      className="border border-neutral-800 p-4 rounded-xl"
+      initial={{ x: side }}
+      animate={isInView ? { x: 0 } : "hidden"}
+      transition={{ type: "spring", stiffness: 20 }}
+    >
       <p className="border-2 rounded-2xl w-fit px-5 py-2 mb-5 bg-gradient-to-r from-purple to-70% to-blue-300 text-black font-medium">
         {tag}
       </p>
@@ -102,7 +118,7 @@ const ProjectCard = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

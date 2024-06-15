@@ -2,8 +2,9 @@
 
 import animationData from "@/data/confetti.json";
 import { cn } from "@/utils/cn";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
@@ -20,7 +21,6 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
@@ -49,7 +49,15 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
+  const contentRef = useRef(null);
+  const contentIsInView = useInView(contentRef, { once: true });
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.5, x: -100, y: 0 }, // Start off-screen to the left
+    visible: { opacity: 1, scale: 1, x: 0, y: 0, transition: { duration: 1 } }, // Animate to final position
+  };
+
+  const leftLists = ["ReactJS", "NestJS", "TypeScript"];
   const rightLists = ["Firebase", "NextJS", "Supabase"];
 
   const [copied, setCopied] = useState(false);
@@ -70,7 +78,8 @@ export const BentoGridItem = ({
   };
 
   return (
-    <div
+    <motion.div
+      ref={contentRef}
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
@@ -83,6 +92,8 @@ export const BentoGridItem = ({
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
+      variants={itemVariants}
+      animate={contentIsInView ? "visible" : "hidden"}
     >
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -210,8 +221,6 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
-//1.15

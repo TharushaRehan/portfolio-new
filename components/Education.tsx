@@ -9,7 +9,7 @@ const Education = () => {
   const headerRef = useRef(null);
   const headerIsInView = useInView(headerRef, { once: true });
   const contentRef = useRef(null);
-  const contentIsInView = useInView(contentRef, { once: false });
+  const contentIsInView = useInView(contentRef, { once: true });
   return (
     <div className="py-20" id="education">
       <motion.h1

@@ -2,6 +2,7 @@
 
 import { workExperience } from "@/data";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 import { Button } from "./ui/moving-border";
 
@@ -9,7 +10,7 @@ const Experience = () => {
   const headerRef = useRef(null);
   const headerIsInView = useInView(headerRef, { once: true });
   const contentRef = useRef(null);
-  const contentIsInView = useInView(contentRef, { once: false });
+  const contentIsInView = useInView(contentRef, { once: true });
   return (
     <div className="py-20" id="experience">
       <motion.h1
@@ -36,18 +37,19 @@ const Experience = () => {
               <Button
                 duration={Math.floor(Math.random() * 10000) + 10000}
                 borderRadius="1.75rem"
-                className="flex-1 text-white border-neutral-200 
-            dark:border-slate-800"
+                className="flex-1 text-white dark:border-slate-800"
                 disabled={true}
               >
                 <div
                   className="flex lg:flex-row flex-col lg:items-center p-3
             py-6 md:p-5 lg:p-10 gap-2"
                 >
-                  <img
+                  <Image
                     src={card.thumbnail}
                     alt={card.title}
                     className="lg:w-32 md:w-20 w-16"
+                    width={16}
+                    height={16}
                   />
                   <div className="lg:ms-5">
                     <h1 className="text-start text-xl md:text-2xl font-bold">

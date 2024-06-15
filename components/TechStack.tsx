@@ -9,7 +9,7 @@ const TechStack = () => {
   const headerRef = useRef(null);
   const headerIsInView = useInView(headerRef, { once: true });
   const stackRef = useRef(null);
-  const stackIsInView = useInView(stackRef, { once: false });
+  const stackIsInView = useInView(stackRef, { once: true });
   //
 
   //
@@ -24,7 +24,7 @@ const TechStack = () => {
       >
         My <span className="text-purple">Tech Stack</span>
       </motion.h1>
-      <div className="mt-20 sm:space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-20 space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {techStack.map((item) => {
           const width = item.id % 2 === 0 ? "-50vw" : "50vw";
           const strings = ["x", "y"];

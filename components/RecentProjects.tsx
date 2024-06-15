@@ -3,6 +3,7 @@
 import { projects } from "@/data";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -11,7 +12,7 @@ import MagicButton from "./ui/magic-button";
 
 const RecentProjects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   //
 
   //
@@ -38,7 +39,7 @@ const RecentProjects = () => {
               animate={isInView ? { x: 0 } : "hidden"}
               transition={{ type: "spring", stiffness: 20 }}
             >
-              <PinContainer title={link} href={link}>
+              <PinContainer title={title} href={link}>
                 <div
                   className="relative flex items-center justify-center
               sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] 
@@ -48,12 +49,19 @@ const RecentProjects = () => {
                     className="relative w-full h-full overflow-hidden
                 lg:rounded-3xl bg-[#13162d]"
                   >
-                    <img src="/bg.png" alt="bg-img" />
+                    <Image
+                      src="/bg.png"
+                      alt="bg-img"
+                      width={570}
+                      height={320}
+                    />
                   </div>
-                  <img
+                  <Image
                     src={img}
                     alt={title}
-                    className="z-10 absolute bottom-0"
+                    className="z-10 absolute bottom-0 rounded-l-2xl"
+                    width={550}
+                    height={320}
                   />
                 </div>
                 <h1
@@ -81,12 +89,22 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index * 2}px)`,
                         }}
                       >
-                        <img src={icon} alt={icon} className="p-2" />
+                        <Image
+                          src={icon}
+                          alt={icon}
+                          className="p-2"
+                          width={50}
+                          height={50}
+                        />
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex justify-center items-center">
+                  <Link
+                    href={link}
+                    target={"_blank"}
+                    className="flex justify-center items-center"
+                  >
                     <p
                       className="flex lg:text-xl md:text-xs text-sm 
                   text-purple"
@@ -94,7 +112,7 @@ const RecentProjects = () => {
                       Check Live Site
                     </p>
                     <FaLocationArrow className="ms-3" color="#CBACF9" />
-                  </div>
+                  </Link>
                 </div>
               </PinContainer>
             </motion.div>

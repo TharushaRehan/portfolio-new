@@ -108,11 +108,17 @@ export const projects = [
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
+    title: "AI Image SaaS Platform",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "",
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/clerk.webp",
+      "/stripe.svg",
+    ],
+    link: "https://image-platform-one.vercel.app/",
   },
   {
     id: 4,
@@ -159,6 +165,17 @@ export const webApps = [
   },
   {
     id: 2,
+    title: "AI Image SaaS Platform",
+    des: "dsdsds",
+    features: [],
+    img: "/p1.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    github: "https://github.com/TharushaRehan/image-platform",
+    liveLink: "https://image-platform-one.vercel.app/",
+    tag: "Full-Stack",
+  },
+  {
+    id: 3,
     title: "Blog Application",
     des: "dsds",
     features: [],
@@ -197,7 +214,7 @@ export const education = [
   {
     id: 1,
     title: "BEng (Hons) Software Engineering",
-    campus: "University of Westminster",
+    campus: "University of Westminster, UK",
     year: "2021 September - Present",
   },
   {
