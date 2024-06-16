@@ -157,8 +157,15 @@ export const webApps = [
         des: "Create, edit, and manage documents efficiently, with the ability to structure content using an intuitive block-based editor.",
       },
     ],
-    img: "/notion-clone.png",
-    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/clerk.webp"],
+    img: ["/notion-clone.png", "/notion-clone.png"],
+    iconLists: [
+      "/next.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/clerk.webp",
+      "/convex.svg",
+      "/edgestore.png",
+    ],
     github: "https://github.com/TharushaRehan/notion-clone",
     liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
     tag: "Full-Stack",
@@ -185,7 +192,7 @@ export const webApps = [
         des: "Breathe new life into old or damaged photos. This feature will remove scratches, noise, and imperfections, restoring your cherished memories to their former glory.",
       },
     ],
-    img: "/ai-image-saas.png",
+    img: ["/ai-image-saas.png", "/ai-image-saas.png"],
     iconLists: [
       "/next.svg",
       "/ts.svg",
@@ -203,7 +210,7 @@ export const webApps = [
     title: "Blog Application",
     des: "Get ready to share your voice and captivate your audience with a beautifully crafted blog built using cutting-edge web technologies. This blog app leverages the power of Next.js, Tailwind CSS, and Framer Motion, used a Figma design, to provide a seamless and visually stunning user experience.",
     features: [],
-    img: "/blog-app-frontend.png",
+    img: ["/blog-app-frontend.png"],
     iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/framer.svg"],
     github: "",
     liveLink: "",
@@ -216,7 +223,8 @@ export const mobileApps = [
     id: 1,
     title: "Video Sharing App",
     des: "dsdsds",
-    img: "/p1.svg",
+    img: ["/p1.svg"],
+    features: [],
     iconLists: ["/re.svg", "/ts.svg"],
     github: "https://github.com/TharushaRehan/notion-clone",
     tag: "Full-Stack",
@@ -225,7 +233,8 @@ export const mobileApps = [
     id: 2,
     title: "Meal Preperation App",
     des: "",
-    img: "",
+    img: [""],
+    features: [],
     iconLists: ["/kotlin.svg", "/sqlite.png"],
     github: "",
     tag: "Full-Stack",
@@ -234,7 +243,8 @@ export const mobileApps = [
     id: 3,
     title: "Dice Game",
     des: "",
-    img: "",
+    img: [""],
+    features: [],
     iconLists: [],
     github: "",
     tag: "Full-Stack",
@@ -309,6 +319,8 @@ export const techStack = [
   {
     id: 2,
     label: "Web Development",
+    description:
+      "Frontend and Backend technologies used to build web applications.",
     icons: [
       {
         label: "HTML",
@@ -341,6 +353,14 @@ export const techStack = [
       {
         label: "Framer Motion",
         img: "/framer.svg",
+      },
+      {
+        label: "NestJS",
+        img: "/nestjs.svg",
+      },
+      {
+        label: "Express.js",
+        img: "",
       },
     ],
   },
@@ -381,6 +401,10 @@ export const techStack = [
         img: "/mongodb.svg",
       },
       {
+        label: "GCP",
+        img: "/gcp.svg",
+      },
+      {
         label: "Clerk",
         img: "/clerk.webp",
       },
@@ -399,6 +423,10 @@ export const techStack = [
         img: "/as.svg",
       },
       {
+        label: "VS Code",
+        img: "/vs.svg",
+      },
+      {
         label: "Vercel",
         img: "/vercel-icon.svg",
       },
@@ -413,10 +441,6 @@ export const techStack = [
       {
         label: "Postman",
         img: "/postman.svg",
-      },
-      {
-        label: "VS Code",
-        img: "/vs.svg",
       },
     ],
   },

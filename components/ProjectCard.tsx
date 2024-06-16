@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -15,8 +22,8 @@ interface Props {
   id: number;
   title: string;
   des: string;
-  features?: Array<Feature>;
-  img: string;
+  features: Array<Feature>;
+  images: string[];
   iconLists: string[];
   github: string;
   liveLink?: string;
@@ -28,7 +35,7 @@ const ProjectCard = ({
   title,
   des,
   features,
-  img,
+  images,
   iconLists,
   github,
   liveLink,
@@ -43,7 +50,7 @@ const ProjectCard = ({
     <motion.div
       ref={ref}
       key={id}
-      className="border border-neutral-800 p-4 rounded-xl"
+      className="border p-4 rounded-xl"
       initial={{ x: side }}
       animate={isInView ? { x: 0 } : "hidden"}
       transition={{ type: "spring", stiffness: 20 }}
@@ -51,14 +58,24 @@ const ProjectCard = ({
       <p className="border-2 rounded-2xl w-fit px-5 py-2 mb-5 bg-gradient-to-r from-purple to-70% to-blue-300 text-black font-medium">
         {tag}
       </p>
-      <div className="bg-[#13162d] p-3 rounded-xl items-center justify-center flex">
-        <Image
-          src={img}
-          alt={title}
-          className="w-full rounded-lg"
-          width={800}
-          height={800}
-        />
+      <div className="bg-[#13162d] p-3 rounded-xl items-center justify-center flex border">
+        <Carousel className="px-2 mx-5 py-2 md:px-5 md:mx-8 md:py-5">
+          <CarouselContent>
+            {images.map((image, index) => (
+              <CarouselItem key={index}>
+                <Image
+                  src={image}
+                  alt={title}
+                  className="w-full rounded-lg"
+                  width={800}
+                  height={800}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
       <div className="mt-5 space-y-4">
         <h3 className="text-xl md:text-2xl font-medium md:font-bold">

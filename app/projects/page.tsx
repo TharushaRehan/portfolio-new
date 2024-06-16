@@ -3,6 +3,8 @@
 import ProjectCard from "@/components/ProjectCard";
 import { mobileApps, webApps } from "@/data";
 import { motion, useInView } from "framer-motion";
+import { ArrowLeft, ArrowUp } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 const ProjectsPage = () => {
@@ -11,6 +13,14 @@ const ProjectsPage = () => {
   return (
     <main className="py-20 relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-20 px-5 overflow-clip ">
       <div className="w-full">
+        <Link
+          href={"/"}
+          className="flex gap-2 border p-3 rounded-full w-fit hover:bg-gray-800 transition-all duration-300"
+          id="back-btn"
+        >
+          <ArrowLeft />
+          Go Back
+        </Link>
         <motion.h1
           ref={headerRef}
           className="heading capitalize"
@@ -20,6 +30,7 @@ const ProjectsPage = () => {
         >
           All <span className="text-purple">Projects</span>
         </motion.h1>
+
         <div className="md:mt-20 mt-10">
           <h1 className="text-center text-black-100 bg-gradient-to-r from-purple to-green-300 font-medium text-xl md:text-2xl py-2 rounded-xl w-full md:w-fit md:px-10">
             Web Applications
@@ -32,7 +43,7 @@ const ProjectsPage = () => {
                 title={item.title}
                 des={item.des}
                 features={item.features}
-                img={item.img}
+                images={item.img}
                 iconLists={item.iconLists}
                 github={item.github}
                 liveLink={item.liveLink}
@@ -52,7 +63,8 @@ const ProjectsPage = () => {
                 id={item.id}
                 title={item.title}
                 des={item.des}
-                img={item.img}
+                images={item.img}
+                features={item.features}
                 iconLists={item.iconLists}
                 github={item.github}
                 tag={item.tag}
@@ -61,6 +73,13 @@ const ProjectsPage = () => {
           </div>
         </div>
       </div>
+      <Link
+        href={"#back-btn"}
+        className="flex gap-2 border p-3 rounded-full w-fit self-end mt-10 hover:bg-gray-800 transition-all duration-300"
+      >
+        <ArrowUp />
+        Top
+      </Link>
     </main>
   );
 };
