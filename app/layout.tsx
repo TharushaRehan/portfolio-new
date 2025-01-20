@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import "./globals.css";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -9,7 +9,7 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Tharusha's Portfolio",
+  title: "Tharusha Perera's Portfolio",
   description: "Modern & Minimalist Portfolio",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

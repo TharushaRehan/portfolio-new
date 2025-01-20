@@ -7,28 +7,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ProjectCardProps } from "@/types";
+
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
-interface Feature {
-  title: string;
-  des: string;
-}
-
-interface Props {
-  id: number;
-  title: string;
-  des: string;
-  features: Array<Feature>;
-  images: string[];
-  iconLists: string[];
-  github: string;
-  liveLink?: string;
-  tag: string;
-}
 
 const ProjectCard = ({
   id,
@@ -40,7 +31,7 @@ const ProjectCard = ({
   github,
   liveLink,
   tag,
-}: Props) => {
+}: ProjectCardProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -95,7 +86,7 @@ const ProjectCard = ({
         <div className="flex items-center">
           {iconLists.map((icon, index) => (
             <div
-              key={icon}
+              key={icon.label}
               className="border border-neutral-800 rounded-full 
                       bg-black flex 
                       justify-center items-center"
@@ -103,13 +94,29 @@ const ProjectCard = ({
                 transform: `translateX(-${5 * index * 2}px)`,
               }}
             >
-              <Image
+              {/* <Image
                 src={icon}
                 alt={icon}
                 width={10}
                 height={10}
                 className="w-10 h-10 p-2"
-              />
+              /> */}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Image
+                      src={icon.img}
+                      alt={icon.label}
+                      width={10}
+                      height={10}
+                      className="w-10 h-10 p-2"
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="">{icon.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
           ))}
         </div>

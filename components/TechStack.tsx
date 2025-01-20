@@ -1,44 +1,23 @@
 "use client";
 
 import { techStack } from "@/data";
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 
 const TechStack = () => {
-  const headerRef = useRef(null);
-  const headerIsInView = useInView(headerRef, { once: true });
-  const stackRef = useRef(null);
-  const stackIsInView = useInView(stackRef, { once: true });
   //
 
   //
   return (
-    <div className="py-20" id="stack">
-      <motion.h1
-        ref={headerRef}
-        className="heading capitalize"
-        initial={{ x: "-20vw" }}
-        transition={{ type: "spring", stiffness: 20 }}
-        animate={headerIsInView ? { x: 0 } : "hidden"}
-      >
+    <div className="container pb-20" id="stack">
+      <h1 className="heading capitalize">
         My <span className="text-purple">Tech Stack</span>
-      </motion.h1>
+      </h1>
       <div className="mt-20 space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {techStack.map((item) => {
-          const width = item.id % 2 === 0 ? "-50vw" : "50vw";
-          const strings = ["x", "y"];
-          const randomIndex = Math.random() < 0.5 ? 0 : 1;
-          const side = strings[randomIndex];
-
           return (
-            <motion.div
-              ref={stackRef}
+            <div
               key={item.label}
               className="py-4 px-5 border border-white-200/25 rounded-lg"
-              initial={{ x: width }}
-              animate={stackIsInView ? { x: 0 } : "hidden"}
-              transition={{ type: "spring", stiffness: 20 }}
             >
               <p className="text-sm md:text-lg lg:text-xl">{item.label}</p>
               {item.description && (
@@ -58,7 +37,7 @@ const TechStack = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

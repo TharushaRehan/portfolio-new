@@ -1,21 +1,12 @@
-type Project = {
-  id: number;
-  title: string;
-  des: string;
-  img: string;
-  iconLists: string[];
-  github: string;
-  liveLink?: string;
-};
+import { ProjectDetailsProps } from "@/types";
 
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Tech Stack", link: "#stack" },
-  { name: "Work Experience", link: "#experience" },
-  { name: "Education", link: "#education" },
-  // { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "About", href: "#about" },
+  { name: "Work Experience", href: "#experience" },
+  { name: "Education", href: "#education" },
+  { name: "Tech Stack", href: "#stack" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export const myRoles = [
@@ -25,92 +16,47 @@ export const myRoles = [
   "Mobile Application Developer",
 ];
 
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
-
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "Shiny UI",
+    des: "A modern UI library for React developers, designed to simplify the development process and enhance the user experience.",
+    img: "/shinyui.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "",
+    github: "https://github.com/TharushaRehan/shinyui",
+    link: "https://shinyui.vercel.app",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
+    title: "Notion Clone",
+    des: "Inspired by Notion, designed to enhance productivity and streamline note-taking and organization.",
+    img: "/notion-clone.png",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clerk",
+      "Convex",
+      "Edgestore",
+    ],
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "",
+    github: "https://github.com/TharushaRehan/notion-clone",
+    link: "https://tharusha-perera-notion-clone.vercel.app/",
   },
   {
     id: 3,
     title: "AI Image SaaS Platform",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    img: "/ai-image-saas.png",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clerk",
+      "MongoDB",
+      "Stripe",
+    ],
     iconLists: [
       "/re.svg",
       "/tail.svg",
@@ -119,22 +65,26 @@ export const projects = [
       "/stripe.svg",
     ],
     link: "https://image-platform-one.vercel.app/",
+    github: "https://github.com/TharushaRehan/image-platform",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
+    title: "Blog Website",
+    des: "A blog app built based on a Figma design.",
+    img: "/blog-app-frontend.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "",
+    github: "",
   },
 ];
 
-export const webApps = [
+export const webApps: ProjectDetailsProps[] = [
   {
     id: 1,
     title: "Notion Clone",
-    des: "I have developed a robust and versatile web application inspired by Notion, designed to enhance productivity and streamline note-taking and organization. This application incorporates several key features to provide a seamless user experience:",
+    description:
+      "I have developed a robust and versatile web application inspired by Notion, designed to enhance productivity and streamline note-taking and organization. This application incorporates several key features to provide a seamless user experience:",
     features: [
       {
         title: "User Authentication (Clerk)",
@@ -157,14 +107,32 @@ export const webApps = [
         des: "Create, edit, and manage documents efficiently, with the ability to structure content using an intuitive block-based editor.",
       },
     ],
-    img: ["/notion-clone.png", "/notion-clone.png"],
-    iconLists: [
-      "/next.svg",
-      "/ts.svg",
-      "/tail.svg",
-      "/clerk.webp",
-      "/convex.svg",
-      "/edgestore.png",
+    images: ["/notion-clone.png", "/notion-clone.png"],
+    iconList: [
+      {
+        label: "Next.js",
+        img: "/next.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+      {
+        label: "Clerk",
+        img: "/clerk.webp",
+      },
+      {
+        label: "Convex",
+        img: "/convex.svg",
+      },
+      {
+        label: "Edgestore",
+        img: "/edgestore.png",
+      },
     ],
     github: "https://github.com/TharushaRehan/notion-clone",
     liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
@@ -173,7 +141,8 @@ export const webApps = [
   {
     id: 2,
     title: "AI Image SaaS Platform",
-    des: "This is a cloud-based image editing SaaS application that empowers you to bring your creative vision to life with a powerful and user-friendly suite of tools. This app also includes payments and credits system",
+    description:
+      "This is a cloud-based image editing SaaS application that empowers you to bring your creative vision to life with a powerful and user-friendly suite of tools. This app also includes payments and credits system",
     features: [
       {
         title: "Generative Fill",
@@ -192,14 +161,32 @@ export const webApps = [
         des: "Breathe new life into old or damaged photos. This feature will remove scratches, noise, and imperfections, restoring your cherished memories to their former glory.",
       },
     ],
-    img: ["/ai-image-saas.png", "/ai-image-saas.png"],
-    iconLists: [
-      "/next.svg",
-      "/ts.svg",
-      "/tail.svg",
-      "/clerk.webp",
-      "/mongodb.svg",
-      "/stripe.svg",
+    images: ["/ai-image-saas.png", "/ai-image-saas.png"],
+    iconList: [
+      {
+        label: "Next.js",
+        img: "/next.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+      {
+        label: "Clerk",
+        img: "/clerk.webp",
+      },
+      {
+        label: "MongoDB",
+        img: "/mongodb.svg",
+      },
+      {
+        label: "Stripe",
+        img: "/stripe.svg",
+      },
     ],
     github: "https://github.com/TharushaRehan/image-platform",
     liveLink: "https://image-platform-one.vercel.app/",
@@ -208,44 +195,71 @@ export const webApps = [
   {
     id: 3,
     title: "Blog Application",
-    des: "Get ready to share your voice and captivate your audience with a beautifully crafted blog built using cutting-edge web technologies. This blog app leverages the power of Next.js, Tailwind CSS, and Framer Motion, used a Figma design, to provide a seamless and visually stunning user experience.",
+    description:
+      "Get ready to share your voice and captivate your audience with a beautifully crafted blog built using cutting-edge web technologies. This blog app leverages the power of Next.js, Tailwind CSS, and Framer Motion, used a Figma design, to provide a seamless and visually stunning user experience.",
     features: [],
-    img: ["/blog-app-frontend.png"],
-    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/framer.svg"],
+    images: ["/blog-app-frontend.png"],
+    iconList: [
+      {
+        label: "Next.js",
+        img: "/next.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+      { label: "Framer Motion", img: "/framer.svg" },
+    ],
     github: "",
     liveLink: "",
     tag: "Front-End",
   },
 ];
 
-export const mobileApps = [
+export const mobileApps: ProjectDetailsProps[] = [
   {
     id: 1,
     title: "Video Sharing App",
-    des: "dsdsds",
-    img: ["/p1.svg"],
+    description: "dsdsds",
+    images: ["/p1.svg"],
     features: [],
-    iconLists: ["/re.svg", "/ts.svg"],
+    iconList: [
+      {
+        label: "React.js",
+        img: "/re.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+    ],
     github: "https://github.com/TharushaRehan/notion-clone",
     tag: "Full-Stack",
   },
   {
     id: 2,
     title: "Meal Preperation App",
-    des: "",
-    img: [""],
+    description: "",
+    images: [""],
     features: [],
-    iconLists: ["/kotlin.svg", "/sqlite.png"],
+    iconList: [
+      { label: "Kotlin", img: "/kotlin.svg" },
+      { label: "SQLite", img: "/sqlite.png" },
+    ],
     github: "",
     tag: "Full-Stack",
   },
   {
     id: 3,
     title: "Dice Game",
-    des: "",
-    img: [""],
+    description: "",
+    images: [""],
     features: [],
-    iconLists: [],
+    iconList: [],
     github: "",
     tag: "Full-Stack",
   },
@@ -257,6 +271,7 @@ export const workExperience = [
     title: "Software Engineer - Intern",
     company: "Cloud99X",
     desc: "As an Intern, I played a key role in developing mobile and web applications featuring advanced functionalities. My responsibilities spanned both frontend and backend development using on-demand technologies. I focused on delivering intuitive user interfaces, robust backend services, and seamless integrations, ensuring the delivery of a high-quality product that met user requirements and business objectives.",
+    year: "July 2023 - July 2024",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -267,7 +282,7 @@ export const education = [
     id: 1,
     title: "BEng (Hons) Software Engineering",
     campus: "University of Westminster, UK",
-    year: "2021 September - Present",
+    year: "2021 September - 2025",
   },
   {
     id: 2,
@@ -313,6 +328,10 @@ export const techStack = [
       {
         label: "Kotlin",
         img: "/kotlin.svg",
+      },
+      {
+        label: "Swift",
+        img: "/swift.svg",
       },
     ],
   },
@@ -360,7 +379,7 @@ export const techStack = [
       },
       {
         label: "Express.js",
-        img: "",
+        img: "/exppressjs.svg",
       },
     ],
   },
@@ -379,6 +398,10 @@ export const techStack = [
       {
         label: "Kotlin",
         img: "/kotlin.svg",
+      },
+      {
+        label: "Swift",
+        img: "/swift.svg",
       },
     ],
   },
@@ -445,69 +468,3 @@ export const techStack = [
     ],
   },
 ];
-
-// export const testimonials = [
-//   {
-//     quote:
-//       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-//     name: "Michael Johnson",
-//     title: "Director of AlphaStream Technologies",
-//   },
-//   {
-//     quote:
-//       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-//     name: "Michael Johnson",
-//     title: "Director of AlphaStream Technologies",
-//   },
-//   {
-//     quote:
-//       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-//     name: "Michael Johnson",
-//     title: "Director of AlphaStream Technologies",
-//   },
-//   {
-//     quote:
-//       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-//     name: "Michael Johnson",
-//     title: "Director of AlphaStream Technologies",
-//   },
-//   {
-//     quote:
-//       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-//     name: "Michael Johnson",
-//     title: "Director of AlphaStream Technologies",
-//   },
-// ];
-
-// export const companies = [
-//   {
-//     id: 1,
-//     name: "cloudinary",
-//     img: "/cloud.svg",
-//     nameImg: "/cloudName.svg",
-//   },
-//   {
-//     id: 2,
-//     name: "appwrite",
-//     img: "/app.svg",
-//     nameImg: "/appName.svg",
-//   },
-//   {
-//     id: 3,
-//     name: "HOSTINGER",
-//     img: "/host.svg",
-//     nameImg: "/hostName.svg",
-//   },
-//   {
-//     id: 4,
-//     name: "stream",
-//     img: "/s.svg",
-//     nameImg: "/streamName.svg",
-//   },
-//   {
-//     id: 5,
-//     name: "docker.",
-//     img: "/dock.svg",
-//     nameImg: "/dockerName.svg",
-//   },
-// ];

@@ -6,7 +6,7 @@ import MagicButton from "./ui/magic-button";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-10 mb-[100px] md:mb-5" id="contact">
+    <footer className="container pb-10 mb-[100px] md:mb-5" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw] capitalize">
           Ready to take <span className="text-purple">your</span> digital

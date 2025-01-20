@@ -41,10 +41,10 @@ const ProjectsPage = () => {
                 key={item.id}
                 id={item.id}
                 title={item.title}
-                des={item.des}
+                des={item.description}
+                images={item.images}
                 features={item.features}
-                images={item.img}
-                iconLists={item.iconLists}
+                iconLists={item.iconList}
                 github={item.github}
                 liveLink={item.liveLink}
                 tag={item.tag}
@@ -62,10 +62,10 @@ const ProjectsPage = () => {
                 key={item.id}
                 id={item.id}
                 title={item.title}
-                des={item.des}
-                images={item.img}
+                des={item.description}
+                images={item.images}
                 features={item.features}
-                iconLists={item.iconLists}
+                iconLists={item.iconList}
                 github={item.github}
                 tag={item.tag}
               />
