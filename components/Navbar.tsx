@@ -1,5 +1,5 @@
 import { navItems } from "@/data";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
 import { ModeToggle } from "./mode-toggle";

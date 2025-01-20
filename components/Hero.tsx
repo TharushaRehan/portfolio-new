@@ -14,7 +14,7 @@ const Hero = () => {
   //
   const handleDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/19-T-nuQEeqe5Dn_UJdvtHmK3ZlwWQEM8/view?usp=sharing",
+      "https://drive.google.com/file/d/1hXWvEXC4saOeR7asUrpPmLzl9H_l2pzb/view?usp=sharing",
       "_blank"
     );
   };

@@ -8,16 +8,14 @@ import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
-    <main className="">
-      <div className="">
-        <Navbar />
-        <Hero />
-        <Experience />
-        <Education />
-        <TechStack />
-        <RecentProjects />
-        <Footer />
-      </div>
+    <main>
+      <Navbar />
+      <Hero />
+      <Experience />
+      <Education />
+      <TechStack />
+      <RecentProjects />
+      <Footer />
     </main>
   );
 }

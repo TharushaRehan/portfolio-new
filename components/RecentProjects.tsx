@@ -91,7 +91,7 @@ const RecentProjects = () => {
           })} mt-10 gap-x-3`}
         >
           All Projects
-          <span className="text-xs text-muted-foreground">Coming Soon</span>
+          <span className="text-xs text-muted-foreground">Available Soon</span>
         </Link>
       </div>
     </div>

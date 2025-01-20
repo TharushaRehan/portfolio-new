@@ -377,10 +377,10 @@ export const techStack = [
         label: "NestJS",
         img: "/nestjs.svg",
       },
-      {
-        label: "Express.js",
-        img: "/exppressjs.svg",
-      },
+      // {
+      //   label: "Express.js",
+      //   img: "/expressjs.png",
+      // },
     ],
   },
   {

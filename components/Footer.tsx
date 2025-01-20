@@ -1,7 +1,8 @@
 import { socialMedia } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa";
+import { buttonVariants } from "./ui/button";
 import MagicButton from "./ui/magic-button";
 
 const Footer = () => {
@@ -38,12 +39,16 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <div
               key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center 
+              className="cursor-pointer flex justify-center 
               items-center backdrop-filter backdrop-blur-lg saturate-180 
               bg-opacity-100 bg-black-200 rounded-lg border 
               border-black-300 hover:opacity-80"
             >
-              <Link href={info.link} target="_blank">
+              <Link
+                href={info.link}
+                target="_blank"
+                className={buttonVariants({ variant: "outline" })}
+              >
                 <Image src={info.img} alt="icons" width={20} height={20} />
               </Link>
             </div>
