@@ -85,8 +85,7 @@ const RecentProjects = () => {
       </Link> */}
       <div className="flex justify-center">
         <Link
-          href=""
-          target="_blank"
+          href="#"
           className={`${buttonVariants({
             variant: "outline",
           })} mt-10 gap-x-3`}

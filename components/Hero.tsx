@@ -13,10 +13,10 @@ import { FlipWords } from "./ui/flip-words";
 const Hero = () => {
   //
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Tharusha_Perera_CV_common.pdf"; // Path to the CV file in the public directory
-    link.download = "Tharusha_Perera_CV_common.pdf"; // File name for download
-    link.click();
+    window.open(
+      "https://drive.google.com/file/d/19-T-nuQEeqe5Dn_UJdvtHmK3ZlwWQEM8/view?usp=sharing",
+      "_blank"
+    );
   };
   //
   return (
