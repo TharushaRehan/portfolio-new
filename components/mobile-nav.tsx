@@ -5,21 +5,32 @@ import * as React from "react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { navItems } from "@/data";
 import Link from "next/link";
 
 export function MobileNav() {
-  const [open, setOpen] = React.useState(false);
-
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet>
       <SheetTrigger asChild className="block lg:hidden">
-        <Button variant="ghost" size="icon" className="px-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="flex items-center justify-center"
+        >
           <MenuIcon size={20} />
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="pr-0">
+        <SheetHeader className="hidden">
+          <SheetTitle>Edit profile</SheetTitle>
+        </SheetHeader>
         <nav className="flex flex-col items-start">
           {navItems.map((item) => (
             <Link

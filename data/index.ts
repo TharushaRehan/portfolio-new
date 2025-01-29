@@ -1,4 +1,5 @@
 import { ProjectDetailsProps } from "@/types";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export const navItems = [
   { name: "About", href: "#about" },
@@ -270,8 +271,46 @@ export const workExperience = [
     id: 1,
     title: "Software Engineer - Intern",
     company: "Cloud99X",
-    desc: "As an Intern, I played a key role in developing mobile and web applications featuring advanced functionalities. My responsibilities spanned both frontend and backend development using on-demand technologies. I focused on delivering intuitive user interfaces, robust backend services, and seamless integrations, ensuring the delivery of a high-quality product that met user requirements and business objectives.",
+    desc: "As an Intern, I played a key role in developing mobile and web applications featuring advanced functionalities. My responsibilities spanned both frontend and backend development using on-demand technologies. As the lead developer in the team, I focused on delivering intuitive user interfaces, robust backend services, and seamless integrations, ensuring the delivery of a high-quality product that met user requirements and business objectives.",
     year: "July 2023 - July 2024",
+    skills: [
+      {
+        label: "React Native",
+        img: "/re.svg",
+      },
+      {
+        label: "React.js",
+        img: "/re.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "HTML",
+        img: "/html.svg",
+      },
+      {
+        label: "CSS",
+        img: "/css.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+      {
+        label: "Firebase",
+        img: "/firebase.svg",
+      },
+      {
+        label: "Nest.js",
+        img: "/nestjs.svg",
+      },
+      {
+        label: "GCP",
+        img: "/gcp.svg",
+      },
+    ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -302,12 +341,12 @@ export const education = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: FaGithub,
     link: "https://github.com/TharushaRehan",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: FaLinkedin,
     link: "https://www.linkedin.com/in/tharusha-perera/",
   },
 ];

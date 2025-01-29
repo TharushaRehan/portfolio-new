@@ -1,6 +1,7 @@
 "use client";
 
 import { workExperience } from "@/data";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -32,6 +33,24 @@ const Experience = () => {
                   <p className="text-start text-black/50 dark:text-white-100 mt-3 font-semibold">
                     {card.desc}
                   </p>
+                  <p className="mt-3 font-semibold text-lg">Skills</p>
+                  <div className="mt-3 flex flex-wrap gap-5">
+                    {card.skills.map((skill) => (
+                      <div
+                        key={skill.label}
+                        className="flex items-center gap-3"
+                      >
+                        <Image
+                          src={skill.img}
+                          alt={skill.label}
+                          width={10}
+                          height={10}
+                          className="w-10 h-10 border rounded-md p-2"
+                        />
+                        <span>{skill.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

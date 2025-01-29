@@ -1,5 +1,4 @@
 import { socialMedia } from "@/data";
-import Image from "next/image";
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa";
 import { buttonVariants } from "./ui/button";
@@ -49,7 +48,7 @@ const Footer = () => {
                 target="_blank"
                 className={buttonVariants({ variant: "outline" })}
               >
-                <Image src={info.img} alt="icons" width={20} height={20} />
+                <info.img />
               </Link>
             </div>
           ))}

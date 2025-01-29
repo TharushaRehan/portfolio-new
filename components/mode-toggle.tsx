@@ -18,11 +18,7 @@ export function ModeToggle() {
 
   return (
     <Button variant="outline" size="icon" onClick={handleThemeChange}>
-      {theme === "light" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] transition-all" />
-      ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem] transition-all" />
-      )}
+      {theme === "light" ? <Sun /> : <Moon />}
     </Button>
   );
 }
