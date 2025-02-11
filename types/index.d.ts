@@ -40,5 +40,4 @@ export interface ProjectDetailsProps {
   features: Array<Feature>;
   github: string;
   liveLink?: string;
-  tag: "Full-Stack" | "Front-End";
 }

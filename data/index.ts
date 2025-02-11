@@ -137,7 +137,7 @@ export const webApps: ProjectDetailsProps[] = [
     ],
     github: "https://github.com/TharushaRehan/notion-clone",
     liveLink: "https://tharusha-perera-notion-clone.vercel.app/",
-    tag: "Full-Stack",
+    //tag: "Full-Stack",
   },
   {
     id: 2,
@@ -191,7 +191,7 @@ export const webApps: ProjectDetailsProps[] = [
     ],
     github: "https://github.com/TharushaRehan/image-platform",
     liveLink: "https://image-platform-one.vercel.app/",
-    tag: "Full-Stack",
+    //tag: "Full-Stack",
   },
   {
     id: 3,
@@ -217,7 +217,7 @@ export const webApps: ProjectDetailsProps[] = [
     ],
     github: "",
     liveLink: "",
-    tag: "Front-End",
+    //tag: "Front-End",
   },
 ];
 
@@ -239,11 +239,11 @@ export const mobileApps: ProjectDetailsProps[] = [
       },
     ],
     github: "https://github.com/TharushaRehan/notion-clone",
-    tag: "Full-Stack",
+    //tag: "Full-Stack",
   },
   {
     id: 2,
-    title: "Meal Preperation App",
+    title: "Meal Preparation App",
     description: "",
     images: [""],
     features: [],
@@ -252,7 +252,7 @@ export const mobileApps: ProjectDetailsProps[] = [
       { label: "SQLite", img: "/sqlite.png" },
     ],
     github: "",
-    tag: "Full-Stack",
+    //tag: "Full-Stack",
   },
   {
     id: 3,
@@ -262,7 +262,7 @@ export const mobileApps: ProjectDetailsProps[] = [
     features: [],
     iconList: [],
     github: "",
-    tag: "Full-Stack",
+    //tag: "Full-Stack",
   },
 ];
 

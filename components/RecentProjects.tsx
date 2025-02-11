@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLocationArrow } from "react-icons/fa6";
 import { buttonVariants } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 const RecentProjects = () => {
   //
@@ -85,13 +86,14 @@ const RecentProjects = () => {
       </Link> */}
       <div className="flex justify-center">
         <Link
-          href="#"
+          href="/projects"
           className={`${buttonVariants({
             variant: "outline",
           })} mt-10 gap-x-3`}
         >
           All Projects
-          <span className="text-xs text-muted-foreground">Available Soon</span>
+          <ArrowRight />
+          {/* <span className="text-xs text-muted-foreground">Available Soon</span> */}
         </Link>
       </div>
     </div>

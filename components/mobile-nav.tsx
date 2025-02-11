@@ -14,8 +14,11 @@ import {
 } from "@/components/ui/sheet";
 import { navItems } from "@/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function MobileNav() {
+  const pathname = usePathname();
+
   return (
     <Sheet>
       <SheetTrigger asChild className="block lg:hidden">
@@ -32,15 +35,18 @@ export function MobileNav() {
           <SheetTitle>Edit profile</SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col items-start">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={buttonVariants({ variant: "link" })}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const url = pathname == "/projects" ? `/${item.href}` : item.href;
+            return (
+              <Link
+                key={item.name}
+                href={url}
+                className={buttonVariants({ variant: "link" })}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
       </SheetContent>
     </Sheet>
