@@ -7,6 +7,7 @@ export const navItems = [
   { name: "Education", href: "#education" },
   { name: "Tech Stack", href: "#stack" },
   { name: "Projects", href: "#projects" },
+  { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "#contact" },
 ];
 

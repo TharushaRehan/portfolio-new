@@ -40,4 +40,5 @@ export interface ProjectDetailsProps {
   features: Array<Feature>;
   github: string;
   liveLink?: string;
+  isMobile?: boolean;
 }

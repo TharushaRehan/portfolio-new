@@ -76,24 +76,15 @@ const RecentProjects = () => {
           );
         })}
       </div>
-      {/* <Link href={"/projects"} className="">
-        <MagicButton
-          title="Show All"
-          icon={<ArrowRight />}
-          position="right"
-          containerClasses="hover:opacity-50 transition-all duration-300"
-        />
-      </Link> */}
       <div className="flex justify-center">
         <Link
           href="/projects"
           className={`${buttonVariants({
             variant: "outline",
-          })} mt-10 gap-x-3`}
+          })} mt-10 gap-x-3 group`}
         >
           All Projects
-          <ArrowRight />
-          {/* <span className="text-xs text-muted-foreground">Available Soon</span> */}
+          <ArrowRight className="group-hover:translate-x-1 transition-all ease-in-out duration-300" />
         </Link>
       </div>
     </div>
