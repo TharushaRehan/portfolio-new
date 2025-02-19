@@ -231,44 +231,44 @@ export const mobileProjects: ProjectDetailsProps[] = [
     ],
     github: "https://github.com/TharushaRehan/ios-weather-app",
   },
-  {
-    id: 2,
-    title: "Music Player App",
-    description:
-      "I have developed a music player application designed to provide users with a seamless and intuitive music listening experience. This application incorporates several key features to enhance the user experience",
-    features: [
-      {
-        title: "Music Library",
-        des: "Access your music library and create playlists to organize your favorite songs and albums.",
-      },
-      {
-        title: "Playback Controls",
-        des: "Control music playback with ease, including play, pause, skip, shuffle, and repeat functions.",
-      },
-      {
-        title: "Customizable Settings",
-        des: "Customize the app settings to suit your preferences, including audio quality, equalizer settings, and playback speed.",
-      },
-      {
-        title: "Offline Playback",
-        des: "Download songs for offline playback, allowing you to enjoy your favorite music without an internet connection.",
-      },
-    ],
-    images: ["/music-player-app.png", "/music-player-app.png"],
-    iconList: [
-      {
-        label: "Expo",
-        img: "/expo.svg",
-      },
-      {
-        label: "React Native",
-        img: "/rn.svg",
-      },
-      {
-        label: "TypeScript",
-        img: "/ts.svg",
-      },
-    ],
-    github: "",
-  },
+  // {
+  //   id: 2,
+  //   title: "Music Player App",
+  //   description:
+  //     "I have developed a music player application designed to provide users with a seamless and intuitive music listening experience. This application incorporates several key features to enhance the user experience",
+  //   features: [
+  //     {
+  //       title: "Music Library",
+  //       des: "Access your music library and create playlists to organize your favorite songs and albums.",
+  //     },
+  //     {
+  //       title: "Playback Controls",
+  //       des: "Control music playback with ease, including play, pause, skip, shuffle, and repeat functions.",
+  //     },
+  //     {
+  //       title: "Customizable Settings",
+  //       des: "Customize the app settings to suit your preferences, including audio quality, equalizer settings, and playback speed.",
+  //     },
+  //     {
+  //       title: "Offline Playback",
+  //       des: "Download songs for offline playback, allowing you to enjoy your favorite music without an internet connection.",
+  //     },
+  //   ],
+  //   images: ["/music-player-app.png", "/music-player-app.png"],
+  //   iconList: [
+  //     {
+  //       label: "Expo",
+  //       img: "/expo.svg",
+  //     },
+  //     {
+  //       label: "React Native",
+  //       img: "/rn.svg",
+  //     },
+  //     {
+  //       label: "TypeScript",
+  //       img: "/ts.svg",
+  //     },
+  //   ],
+  //   github: "",
+  // },
 ];
