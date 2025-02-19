@@ -165,6 +165,34 @@ export const frontEndProjects: ProjectDetailsProps[] = [
   },
   {
     id: 2,
+    title: "SaaS Landing Page - Dark Theme",
+    description:
+      "I have developed a sleek and modern landing page for a SaaS application based on a UI design by Framer.",
+    features: [],
+    images: ["/saas-landing-page-dark.png"],
+    iconList: [
+      {
+        label: "React",
+        img: "/react.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
+      },
+      {
+        label: "Framer Motion",
+        img: "/framer.svg",
+      },
+    ],
+    github: "https://github.com/TharushaRehan/saas-website-dark",
+    liveLink: "https://saas-website-dark-tp.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Blog Application",
     description:
       "Get ready to share your voice and captivate your audience with a beautifully crafted blog built using cutting-edge web technologies. This blog app leverages the power of Next.js, Tailwind CSS, and Framer Motion, used a Figma design, to provide a seamless and visually stunning user experience.",
@@ -185,8 +213,8 @@ export const frontEndProjects: ProjectDetailsProps[] = [
       },
       { label: "Framer Motion", img: "/framer.svg" },
     ],
-    github: "",
-    liveLink: "",
+    github: "https://github.com/TharushaRehan/blog-app-frontend",
+    liveLink: "https://blog-app-frontend-tp.vercel.app/",
   },
 ];
 
