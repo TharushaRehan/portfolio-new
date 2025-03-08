@@ -26,7 +26,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-5xl text-nowrap">
             Hi, I&apos;m Tharusha 👋
           </h1>
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center">
             <p className="max-w-[300px] md:max-w-[400px] text-sm md:text-xl font-light">
               I&apos;m a
             </p>

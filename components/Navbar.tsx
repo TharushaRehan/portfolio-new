@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { navItems, socialMedia } from "@/data";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { MobileNav } from "./mobile-nav";
@@ -18,10 +18,12 @@ const Navbar = () => {
       )}
     >
       <div className="flex justify-between items-center py-5">
-        <h1 className="text-2xl font-bold">Tharusha Perera</h1>
+        <Link href={"/"} className="text-2xl font-bold">
+          Tharusha Perera
+        </Link>
         <nav className="hidden lg:block">
           {navItems.map((item) => {
-            const url = pathname == "/projects" ? `/${item.href}` : item.href;
+            const url = pathname != "/" ? `/${item.href}` : item.href;
             return (
               <Link
                 key={item.name}
@@ -33,10 +35,19 @@ const Navbar = () => {
             );
           })}
         </nav>
-        {/* <div className="flex items-center gap-x-2">
-          <ModeToggle />
-          <MobileNav />
-        </div> */}
+
+        <div className="hidden lg:flex items-center gap-2">
+          {socialMedia.map((item) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              <item.img />
+            </Link>
+          ))}
+        </div>
         <MobileNav />
       </div>
       <hr className="m-0 h-px w-full border-none bg-gradient-to-r from-purple/0 via-purple to-purple/0" />

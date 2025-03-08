@@ -4,10 +4,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 export const navItems = [
   { name: "About", href: "#about" },
   { name: "Work Experience", href: "#experience" },
-  { name: "Education", href: "#education" },
-  { name: "Tech Stack", href: "#stack" },
   { name: "Projects", href: "#projects" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Tech Stack", href: "#stack" },
+  { name: "Education", href: "#education" },
+  { name: "Blogs", href: "blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -68,16 +68,6 @@ export const projects = [
     ],
     link: "https://image-platform-one.vercel.app/",
     github: "https://github.com/TharushaRehan/image-platform",
-  },
-  {
-    id: 4,
-    title: "Blog Website",
-    des: "A blog app built based on a Figma design.",
-    img: "/blog-app-frontend.png",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "",
-    github: "",
   },
 ];
 
@@ -270,6 +260,28 @@ export const mobileApps: ProjectDetailsProps[] = [
 export const workExperience = [
   {
     id: 1,
+    title: "Associate Software Engineer - Full-Stack",
+    company: "Upview Technologies",
+    desc: "",
+    year: "March 2025 - Present",
+    skills: [
+      {
+        label: "React Native",
+        img: "/re.svg",
+      },
+      {
+        label: "TypeScript",
+        img: "/ts.svg",
+      },
+      {
+        label: "Supabase",
+        img: "/supabase.svg",
+      },
+    ],
+    className: "md:col-span-2",
+  },
+  {
+    id: 2,
     title: "Software Engineer - Intern",
     company: "Cloud99X",
     desc: "As an Intern, I played a key role in developing mobile and web applications featuring advanced functionalities. My responsibilities spanned both frontend and backend development using on-demand technologies. As the lead developer in the team, I focused on delivering intuitive user interfaces, robust backend services, and seamless integrations, ensuring the delivery of a high-quality product that met user requirements and business objectives.",
@@ -313,7 +325,6 @@ export const workExperience = [
       },
     ],
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
   },
 ];
 
@@ -322,7 +333,7 @@ export const education = [
     id: 1,
     title: "BEng (Hons) Software Engineering",
     campus: "University of Westminster, UK",
-    year: "2021 September - 2025",
+    year: "2021 - 2025",
   },
   {
     id: 2,
@@ -330,13 +341,13 @@ export const education = [
     campus: "ICBT Campus - Sri Lanka",
     year: "2021 April",
   },
-  {
-    id: 3,
-    title: "GCE Advanced Level - Commerce Stream (with ICT)",
-    campus: "Holy Cross College, Kalutara",
-    results: "A1, B1, C1",
-    year: "2018 - 2020",
-  },
+  // {
+  //   id: 3,
+  //   title: "GCE Advanced Level - Commerce Stream (with ICT)",
+  //   campus: "Holy Cross College, Kalutara",
+  //   results: "A1, B1, C1",
+  //   year: "2018 - 2020",
+  // },
 ];
 
 export const socialMedia = [
@@ -355,7 +366,7 @@ export const socialMedia = [
 export const techStack = [
   {
     id: 1,
-    label: "Programming Laguages",
+    label: "Programming Languages",
     icons: [
       {
         label: "Java",
@@ -426,6 +437,8 @@ export const techStack = [
   {
     id: 3,
     label: "Mobile Development",
+    description:
+      "Technologies used to build native and cross-platform mobile applications. ",
     icons: [
       {
         label: "React Native",
@@ -436,12 +449,12 @@ export const techStack = [
         img: "/expo.svg",
       },
       {
-        label: "Kotlin",
-        img: "/kotlin.svg",
-      },
-      {
         label: "Swift",
         img: "/swift.svg",
+      },
+      {
+        label: "Kotlin",
+        img: "/kotlin.svg",
       },
     ],
   },
@@ -449,7 +462,7 @@ export const techStack = [
     id: 4,
     label: "Backend Services",
     description:
-      "Tools which provides authentication, database, storage and many more.",
+      "Tools which provides authentication, database, storage and payment services.",
     icons: [
       {
         label: "Supabase",
@@ -472,6 +485,10 @@ export const techStack = [
         img: "/clerk.webp",
       },
       {
+        label: "Stripe",
+        img: "/stripe.svg",
+      },
+      {
         label: "SQLite",
         img: "/sqlite.png",
       },
@@ -480,6 +497,7 @@ export const techStack = [
   {
     id: 5,
     label: "Other Tools",
+    description: "Tools used to enhance the development process.",
     icons: [
       {
         label: "Android Studio",
@@ -490,13 +508,14 @@ export const techStack = [
         img: "/vs.svg",
       },
       {
+        label: "Xcode",
+        img: "/tech/xcode.png",
+      },
+      {
         label: "Vercel",
         img: "/vercel-icon.svg",
       },
-      {
-        label: "Stripe",
-        img: "/stripe.svg",
-      },
+
       {
         label: "GitHub",
         img: "/git.svg",
