@@ -24,9 +24,6 @@ const Education = () => {
                     {card.year}
                   </p>
                 </div>
-                {card.results && (
-                  <p className="text-start">Results - {card.results}</p>
-                )}
                 <p className="text-start">{card.campus}</p>
               </div>
             </div>
