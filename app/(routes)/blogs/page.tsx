@@ -1,8 +1,13 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BlogsPage = () => {
+  const router = useRouter();
+
   return (
     <div className="container py-20">
       <h1 className="heading capitalize text-purple">Blogs</h1>
@@ -15,16 +20,19 @@ const BlogsPage = () => {
               Tharusha Perera
             </p>
           </div>
-          <Link
+          <Button
             className="flex items-center gap-x-1 border rounded-xl px-3 py-2 group hover:border-purple transition-all duration-300 h-fit"
-            href={"/blogs/react-native-vs-expo"}
+            onClick={() => {
+              router.push("/blogs/react-native-vs-expo");
+            }}
+            //href={"/blogs/react-native-vs-expo"}
           >
             <p className="text-nowrap">Read here</p>
             <ArrowRight
               className="group-hover:translate-x-1 transition-all duration-300"
               size={16}
             />
-          </Link>
+          </Button>
         </div>
       </div>
     </div>
