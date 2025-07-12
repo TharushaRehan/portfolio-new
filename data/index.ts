@@ -260,7 +260,7 @@ export const mobileApps: ProjectDetailsProps[] = [
 export const workExperience = [
   {
     id: 1,
-    title: "Associate Software Engineer - Full-Stack",
+    title: "Associate Software Engineer - Full Stack",
     company: "Upview Technologies",
     desc: "",
     year: "March 2025 - Present",
@@ -276,6 +276,14 @@ export const workExperience = [
       {
         label: "Supabase",
         img: "/supabase.svg",
+      },
+      {
+        label: "Razorpay",
+        img: "/razorpaypng.png",
+      },
+      {
+        label: "GCP",
+        img: "/gcp.svg",
       },
     ],
     className: "md:col-span-2",
@@ -485,10 +493,6 @@ export const techStack = [
         img: "/clerk.webp",
       },
       {
-        label: "Stripe",
-        img: "/stripe.svg",
-      },
-      {
         label: "SQLite",
         img: "/sqlite.png",
       },
@@ -496,6 +500,21 @@ export const techStack = [
   },
   {
     id: 5,
+    label: "Payment Gateways",
+    description: "Payment gateways used for processing payments.",
+    icons: [
+      {
+        label: "Stripe",
+        img: "/stripe.svg",
+      },
+      {
+        label: "Razorpay",
+        img: "/razorpaypng.png",
+      },
+    ],
+  },
+  {
+    id: 6,
     label: "Other Tools",
     description: "Tools used to enhance the development process.",
     icons: [
