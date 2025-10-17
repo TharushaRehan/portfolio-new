@@ -262,12 +262,20 @@ export const workExperience = [
     id: 1,
     title: "Associate Software Engineer - Full Stack",
     company: "Upview Technologies",
-    desc: "",
+    desc: "Gained hands-on full-stack mobile and web development experience, encompassing frontend, backend, and API integration. Collaborated with cross-functional teams to deliver high-quality features and seamless integrations. Strengthened problem-solving, adaptability, and project ownership skills while working in a professional engineering environment.",
     year: "March 2025 - Present",
     skills: [
       {
         label: "React Native",
         img: "/re.svg",
+      },
+      {
+        label: "Next.js",
+        img: "/next.svg",
+      },
+      {
+        label: "Tailwind CSS",
+        img: "/tail.svg",
       },
       {
         label: "TypeScript",
@@ -280,6 +288,10 @@ export const workExperience = [
       {
         label: "Razorpay",
         img: "/razorpaypng.png",
+      },
+      {
+        label: "Stripe",
+        img: "/stripe.svg",
       },
       {
         label: "GCP",
