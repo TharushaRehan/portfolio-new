@@ -7,6 +7,7 @@ import { MobileNav } from "./mobile-nav";
 //import { ModeToggle } from "./mode-toggle";
 import { buttonVariants } from "./ui/button";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -47,6 +48,7 @@ const Navbar = () => {
               <item.img />
             </Link>
           ))}
+          <ModeToggle />
         </div>
         <MobileNav />
       </div>
