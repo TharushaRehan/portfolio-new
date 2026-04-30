@@ -62,8 +62,8 @@ export default function FloatingTechStackDemo() {
     <FloatingTechStack
       title="Tech Stack"
       subtitle="Explore the technologies I use in my projects"
-      ctaText="Get Started"
-      ctaHref="#"
+      ctaText="View Projects"
+      ctaHref="/projects"
       icons={demoIcons}
     />
   );
