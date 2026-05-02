@@ -9,10 +9,11 @@ const Hero = () => {
           <AvatarFallback>Tharusha Perera</AvatarFallback>
         </Avatar>
         <div>
-          <p className="text-2xl md:text-3xl font-medium tracking-tight bg-linear-to-b from-foreground to-foreground/70 text-transparent bg-clip-text mt-6">
+          <p className="text-2xl md:text-3xl font-medium tracking-tight bg-linear-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
             Tharusha Perera
           </p>
           <p className="text-gray-500">Product Engineer</p>
+          <div></div>
         </div>
       </div>
       <div>
