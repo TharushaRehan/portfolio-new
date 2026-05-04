@@ -1,31 +1,130 @@
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { MotionButton } from "../motion";
+import { images } from "@/assets/images";
 
-const Hero = () => {
+export default function Hero() {
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="px-20 py-10 flex gap-x-10">
-      <div className="flex items-center gap-x-5 justify-center">
-        <Avatar className="w-22.5 h-22.5">
-          <AvatarImage src={"./profile-pic.jpeg"} />
-          <AvatarFallback>Tharusha Perera</AvatarFallback>
-        </Avatar>
-        <div>
-          <p className="text-2xl md:text-3xl font-medium tracking-tight bg-linear-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
-            Tharusha Perera
-          </p>
-          <p className="text-gray-500">Product Engineer</p>
-          <div></div>
-        </div>
-      </div>
-      <div>
-        <p className="text-4xl font-medium">
-          Hi! I&apos;m{" "}
-          <span className="bg-white shadow-xl rounded-full px-3 py-2 text-xl">
-            Tharusha Perera
-          </span>
-        </p>
-      </div>
-    </div>
-  );
-};
+    <section
+      className="relative flex items-center overflow-hidden w-full"
+      id="hero"
+    >
+      <div className="glow-element top-1/4 left-1/4 opacity-50" />
+      <div
+        className="glow-element top-1/2 right-1/4 opacity-30"
+        style={{ animationDelay: "-15s" }}
+      />
 
-export default Hero;
+      <div className="px-20 py-28 w-full flex">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex flex-col items-center w-full"
+        >
+          <div className="flex flex-col items-start gap-6 md:flex-row md:items-start md:justify-between w-full">
+            <div className="flex items-center gap-x-4 shrink-0">
+              <Avatar className="w-24 h-24">
+                <AvatarImage src={images.profilePic} />
+                <AvatarFallback>Tharusha Perera</AvatarFallback>
+              </Avatar>
+              <div className="text-nowrap text-start">
+                <p className="text-2xl md:text-3xl font-medium">
+                  Tharusha Perera
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Product Engineer
+                </p>
+              </div>
+            </div>
+            <div>
+              <Badge variant="outline" className="mb-6 self-start rounded-full">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                Available for freelance
+              </Badge>
+              <h1 className="flex-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-7xl mb-8 md:text-start">
+                Hi! I&apos;m{" "}
+                <span className="inline-flex items-center justify-center bg-secondary text-secondary-foreground rounded-full px-5 py-2 mx-2 text-2xl md:text-3xl lg:text-4xl align-middle shadow-sm">
+                  Tharusha Perera
+                </span>
+                <br />a{" "}
+                <span className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-full px-5 py-2 mx-2 text-2xl md:text-4xl lg:text-6xl align-middle shadow-sm">
+                  Product Engineer
+                </span>
+                <br />
+                building{" "}
+                <span className="inline-flex items-center justify-center border-2 border-foreground/10 bg-white rounded-full px-5 py-2 mx-2 text-2xl md:text-4xl lg:text-6xl align-middle shadow-sm">
+                  apps
+                </span>{" "}
+                people love.
+              </h1>
+            </div>
+          </div>
+
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-medium text-center">
+            I ship polished digital products across web and mobile. Bridging the
+            gap between engineering quality and user experience.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <MotionButton
+              size="lg"
+              onClick={scrollToProjects}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.98 }}
+              className="rounded-full bg-primary text-primary-foreground font-bold px-6 h-12 w-full sm:w-auto flex items-center gap-2"
+            >
+              See my work
+              <motion.span
+                whileHover={{ x: 6 }}
+                className="w-5 h-5 inline-block"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </motion.span>
+            </MotionButton>
+
+            {/* <div className="flex items-center gap-4 text-foreground/70 justify-center">
+              <MotionAnchor
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-3 bg-card rounded-full"
+              >
+                <IconGitHub className="w-5 h-5" />
+              </MotionAnchor>
+              <MotionAnchor
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-3 bg-card rounded-full"
+              >
+                <LinkedinLogoIcon className="w-5 h-5" />
+              </MotionAnchor>
+              <MotionAnchor
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-3 bg-card rounded-full"
+              >
+                <TwitterLogoIcon className="w-5 h-5" />
+              </MotionAnchor>
+            </div> */}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

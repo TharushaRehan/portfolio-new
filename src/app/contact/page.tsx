@@ -1,3 +1,4 @@
+import { images } from "@/assets/images";
 import Header from "@/components/common/header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -24,7 +25,7 @@ export default function ContactPage() {
         <div className="flex justify-between">
           <div className="flex gap-x-5 max-w-150">
             <Avatar className="w-22.5 h-22.5">
-              <AvatarImage src={"./profile-pic.jpeg"} />
+              <AvatarImage src={images.profilePic} />
               <AvatarFallback>Tharusha Perera</AvatarFallback>
             </Avatar>
             <div className="flex flex-col gap-y-5">

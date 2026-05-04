@@ -49,6 +49,16 @@
 }
 
 :root {
+  /* simple color variables used by AuroraBackground */
+  --white: #ffffff;
+  --black: #000000;
+  --transparent: transparent;
+  --blue-500: #3b82f6;
+  --indigo-300: #a78bfa;
+  --blue-300: #60a5fa;
+  --violet-200: #c4b5fd;
+  --blue-400: #60a5fa;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -126,5 +136,29 @@
   }
   html {
     @apply font-mono;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position:
+      0% 50%,
+      50% 50%;
+  }
+  50% {
+    background-position:
+      100% 50%,
+      50% 50%;
+  }
+  100% {
+    background-position:
+      0% 50%,
+      50% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-aurora {
+    animation: aurora 20s linear infinite;
   }
 }
