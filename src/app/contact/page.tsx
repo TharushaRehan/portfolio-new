@@ -1,5 +1,6 @@
-import { ProfilePicture } from "@/components/common";
+import { DotLabel, ProfilePicture } from "@/components/common";
 import { Header } from "@/components/layout";
+import { FAQ } from "@/components/pages/contact";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -13,12 +14,9 @@ export default function ContactPage() {
     <main>
       <Header />
       <Separator />
-      <section className="p-20 space-y-20">
+      <section className="py-10 px-20 space-y-10">
         <div className="space-y-5">
-          <div className="flex gap-x-2 items-center">
-            <div className="bg-green-500 size-3 rounded-full" />
-            <p className="tracking-tighter">Available for freelance work</p>
-          </div>
+          <DotLabel text="Available for freelance work" />
           <h1 className="text-5xl font-medium">About Me</h1>
         </div>
         <div className="flex justify-between">
@@ -72,13 +70,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-        <div className="space-y-8">
-          <div className="flex items-center justify-center gap-x-2">
-            <div className="size-3 bg-green-500 rounded-full" />
-            <p className="text-lg text-center">FAQ</p>
-          </div>
-          <p className="text-5xl font-extrabold text-center">{`Got Questions?`}</p>
-        </div>
+        <FAQ />
       </section>
     </main>
   );

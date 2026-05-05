@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="w-full flex justify-between items-center px-20 py-5 z-10">
       <Link href="/" className="text-2xl font-bold">
-        Tharusha Perera
+        TP
       </Link>
       <div className="flex items-center gap-x-3">
         <Link

@@ -1,9 +1,9 @@
 "use client";
 
 import { Header } from "@/components/layout";
-import { Hero } from "@/components/home";
+import { Hero } from "@/components/pages/home";
 import { AuroraBackground } from "@/components/custom";
-import { TechStack } from "@/components/home";
+import { TechStack } from "@/components/pages/home";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {

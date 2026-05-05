@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-import { MotionButton } from "../motion";
-import { ProfilePicture } from "../common/profile-picture";
+import { MotionButton } from "@/components/motion";
+import { DotLabel, ProfilePicture } from "@/components/common";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="flex flex-col items-center w-full"
         >
-          <div className="flex flex-col items-start gap-6 md:flex-row md:items-start md:justify-between w-full">
+          <div className="flex flex-col items-start gap-10 md:flex-row md:items-start md:justify-between w-full">
             <div className="flex items-center gap-x-4 shrink-0">
               <ProfilePicture />
               <div className="text-nowrap text-start">
@@ -40,11 +40,8 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <Badge variant="outline" className="mb-6 self-start rounded-full">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                Available for freelance
-              </Badge>
+            <div className="space-y-5">
+              <DotLabel text="Available for freelance work" />
               <h1 className="flex-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-7xl mb-8 md:text-start">
                 Hi! I&apos;m{" "}
                 <span className="inline-flex items-center justify-center bg-secondary text-secondary-foreground rounded-full px-5 py-2 mx-2 text-2xl md:text-3xl lg:text-4xl align-middle shadow-sm">
