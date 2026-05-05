@@ -1,6 +1,5 @@
-import { images } from "@/assets/images";
-import Header from "@/components/common/header";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ProfilePicture } from "@/components/common";
+import { Header } from "@/components/layout";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -24,10 +23,7 @@ export default function ContactPage() {
         </div>
         <div className="flex justify-between">
           <div className="flex gap-x-5 max-w-150">
-            <Avatar className="w-22.5 h-22.5">
-              <AvatarImage src={images.profilePic} />
-              <AvatarFallback>Tharusha Perera</AvatarFallback>
-            </Avatar>
+            <ProfilePicture />
             <div className="flex flex-col gap-y-5">
               <Link href={"mailto:tharushaperera088@gmail.com"}>
                 <p className="text-xl font-semibold">

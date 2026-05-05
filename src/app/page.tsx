@@ -1,9 +1,9 @@
 "use client";
 
-import Header from "@/components/common/header";
-import Hero from "@/components/common/hero";
-import FloatingIconsHeroDemo from "@/components/common/tech-stack";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Header } from "@/components/layout";
+import { Hero } from "@/components/home";
+import { AuroraBackground } from "@/components/custom";
+import { TechStack } from "@/components/home";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <Separator className="bg-gray-100" />
         <Hero />
       </AuroraBackground>
-      <FloatingIconsHeroDemo />
+      <TechStack />
     </main>
   );
 }

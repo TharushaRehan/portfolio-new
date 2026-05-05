@@ -24,7 +24,6 @@ import {
 
 // Define the icons with their unique positions for the demo.
 const demoIcons: FloatingTechStackProps["icons"] = [
-  // Total 16 unique icons
   { id: 1, icon: IconNextjs, className: "top-[10%] left-[10%]" },
   { id: 2, icon: IconTypeScript, className: "top-[20%] right-[8%]" },
   { id: 3, icon: IconExpo, className: "top-[80%] left-[10%]" },
@@ -43,7 +42,7 @@ const demoIcons: FloatingTechStackProps["icons"] = [
   { id: 16, icon: IconMongoDB, className: "top-[60%] left-[30%]" },
 ];
 
-export default function FloatingTechStackDemo() {
+const TechStack = () => {
   return (
     <FloatingTechStack
       title="Tech Stack"
@@ -53,4 +52,8 @@ export default function FloatingTechStackDemo() {
       icons={demoIcons}
     />
   );
-}
+};
+
+TechStack.displayName = "TechStack";
+
+export { TechStack };

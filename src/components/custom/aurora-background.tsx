@@ -7,7 +7,7 @@ interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   showRadialGradient?: boolean;
 }
 
-export const AuroraBackground = ({
+const AuroraBackground = ({
   className,
   children,
   showRadialGradient = true,
@@ -52,3 +52,7 @@ export const AuroraBackground = ({
     </main>
   );
 };
+
+AuroraBackground.displayName = "AuroraBackground";
+
+export { AuroraBackground };

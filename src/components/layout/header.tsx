@@ -1,4 +1,3 @@
-import React from "react";
 import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -36,4 +35,6 @@ const Header = () => {
   );
 };
 
-export default Header;
+Header.displayName = "Header";
+
+export { Header };

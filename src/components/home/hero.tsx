@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { MotionButton } from "../motion";
-import { images } from "@/assets/images";
+import { ProfilePicture } from "../common/profile-picture";
 
-export default function Hero() {
+const Hero = () => {
   const scrollToProjects = () => {
     const el = document.getElementById("projects");
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -31,10 +30,7 @@ export default function Hero() {
         >
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-start md:justify-between w-full">
             <div className="flex items-center gap-x-4 shrink-0">
-              <Avatar className="w-24 h-24">
-                <AvatarImage src={images.profilePic} />
-                <AvatarFallback>Tharusha Perera</AvatarFallback>
-              </Avatar>
+              <ProfilePicture />
               <div className="text-nowrap text-start">
                 <p className="text-2xl md:text-3xl font-medium">
                   Tharusha Perera
@@ -127,4 +123,8 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+Hero.displayName = "Hero";
+
+export { Hero };
