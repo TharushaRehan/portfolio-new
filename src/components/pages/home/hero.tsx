@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative flex items-center overflow-hidden w-full"
+      className="relative flex items-center overflow-hidden w-full pt-20"
       id="hero"
     >
       <div className="glow-element top-1/4 left-1/4 opacity-50" />

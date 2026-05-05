@@ -3,7 +3,6 @@ import { Header } from "@/components/layout";
 import { FAQ } from "@/components/pages/contact";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Send } from "lucide-react";
@@ -13,8 +12,7 @@ export default function ContactPage() {
   return (
     <main>
       <Header />
-      <Separator />
-      <section className="py-10 px-20 space-y-10">
+      <section className="p-20 space-y-10">
         <div className="space-y-5">
           <DotLabel text="Available for freelance work" />
           <h1 className="text-5xl font-medium">About Me</h1>
