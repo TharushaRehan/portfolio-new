@@ -5,7 +5,7 @@ import { images } from "@/assets/images";
 const ProfilePicture = () => {
   return (
     <Avatar className="w-22.5 h-22.5">
-      <AvatarImage src={images.profilePic} />
+      <AvatarImage src={images.profilePic2} />
       <AvatarFallback>Tharusha Perera</AvatarFallback>
     </Avatar>
   );

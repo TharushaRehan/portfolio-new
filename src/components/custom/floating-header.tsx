@@ -46,7 +46,7 @@ const FloatingHeader = () => {
           {links.map((link) => (
             <Link
               key={link.label}
-              className={buttonVariants({ variant: "ghost", size: "sm" })}
+              className={buttonVariants({ variant: "link" })}
               href={link.href}
             >
               {link.label}

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import { MotionButton } from "@/components/motion";
 import { DotLabel, ProfilePicture } from "@/components/common";
@@ -12,7 +11,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative flex items-center overflow-hidden w-full pt-20"
+      className="relative flex items-center overflow-hidden mx-auto w-full max-w-7xl"
       id="hero"
     >
       <div className="glow-element top-1/4 left-1/4 opacity-50" />
@@ -21,12 +20,12 @@ const Hero = () => {
         style={{ animationDelay: "-15s" }}
       />
 
-      <div className="px-20 py-28 w-full flex">
+      <div className="py-20 w-full flex">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="flex flex-col items-center w-full"
+          className="flex flex-col items-center justify-between w-full"
         >
           <div className="flex flex-col items-start gap-10 md:flex-row md:items-start md:justify-between w-full">
             <div className="flex items-center gap-x-4 shrink-0">
@@ -61,7 +60,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-medium text-center">
+          <p className="text-md md:text-lg text-muted-foreground max-w-3xl mb-10 font-medium text-center">
             I ship polished digital products across web and mobile. Bridging the
             gap between engineering quality and user experience.
           </p>

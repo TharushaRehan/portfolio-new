@@ -17,12 +17,12 @@ const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col  h-screen items-center justify-cente dark:bg-zinc-900  text-slate-950 transition-bg",
+          "relative flex flex-col min-h-screen items-start justify-start dark:bg-zinc-900 text-slate-950 transition-bg",
           className,
         )}
         {...props}
       >
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-20 inset-0 overflow-hidden">
           <div
             //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(

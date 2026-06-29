@@ -8,8 +8,8 @@ import { TechStack } from "@/components/pages/home";
 export default function Home() {
   return (
     <main>
-      <AuroraBackground className="p-0">
-        <Header />
+      <Header />
+      <AuroraBackground className="">
         <Hero />
       </AuroraBackground>
       <TechStack />

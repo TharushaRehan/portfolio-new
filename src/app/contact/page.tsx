@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main>
       <Header />
-      <section className="p-20 space-y-10">
+      <section className="py-20 space-y-10 mx-auto w-full max-w-7xl">
         <div className="space-y-5">
           <DotLabel text="Available for freelance work" />
           <h1 className="text-5xl font-medium">About Me</h1>

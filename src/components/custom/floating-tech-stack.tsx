@@ -131,7 +131,7 @@ const FloatingTechStack = React.forwardRef<
       ref={ref}
       onMouseMove={handleMouseMove}
       className={cn(
-        "relative w-full h-screen min-h-175 flex items-center justify-center overflow-hidden bg-background",
+        "relative h-screen min-h-175 flex items-center justify-center overflow-hidden bg-background mx-auto w-full max-w-7xl",
         className,
       )}
       {...props}
