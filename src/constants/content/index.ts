@@ -19,3 +19,5 @@ export const FAQ_QUESTIONS = [
       "My pricing is project-based and depends on the scope and complexity of the work. I provide detailed proposals and quotes after understanding your specific needs and requirements.",
   },
 ];
+
+export const EMAIL_ADDRESS = "tharushaperera088@gmail.com";
