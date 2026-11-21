@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
             <div className="space-y-5">
               <DotLabel text="Available for freelance work" />
-              <h1 className="flex-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-7xl mb-8 md:text-start">
+              <h1 className="flex-1 text-4xl md:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tighter max-w-7xl mb-8 md:text-start">
                 Hi! I&apos;m{" "}
                 <span className="inline-flex items-center justify-center bg-secondary text-secondary-foreground rounded-full px-5 py-2 mx-2 text-2xl md:text-3xl lg:text-4xl align-middle shadow-sm">
                   Tharusha Perera

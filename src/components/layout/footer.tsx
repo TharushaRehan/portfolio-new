@@ -17,7 +17,7 @@ const Footer = () => {
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-16 px-6 py-24 lg:grid-cols-2 lg:items-center lg:gap-12">
         {/* Left: headline */}
-        <h2 className="text-5xl font-bold leading-[0.95] tracking-tight md:text-7xl">
+        <h2 className="text-5xl font-normal leading-[0.95] tracking-tighter md:text-7xl">
           {`Let's create something extraordinary together`}
           <span className="text-green-500">.</span>
         </h2>

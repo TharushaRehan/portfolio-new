@@ -21,3 +21,4 @@ export const FAQ_QUESTIONS = [
 ];
 
 export const EMAIL_ADDRESS = "tharushaperera088@gmail.com";
+export * from "./projects";
