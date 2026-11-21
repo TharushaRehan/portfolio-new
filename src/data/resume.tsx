@@ -14,7 +14,7 @@ export const DATA = {
     "Software Engineer building web and mobile apps people love. Full-stack with Next.js, React Native and TypeScript.",
   summary:
     "I'm a dedicated, detail-oriented Software Engineer with experience in [mobile and web application development](/#projects). I specialize in building user-friendly interfaces, scalable backend services and seamless integrations. I'm currently a full-stack engineer at Upview Technologies, after leading development as an intern at Cloud99X, and I hold a [BEng (Hons) in Software Engineering](/#education) from the University of Westminster. With strong problem-solving skills and leadership experience, I focus on shipping high-quality products that meet user needs and business goals.",
-  avatarUrl: "/profile-pic-2.jpeg",
+  avatarUrl: "/profile-pic.jpeg",
   skills: [
     { name: "React Native", icon: ReactLight },
     { name: "React", icon: ReactLight },
@@ -22,15 +22,15 @@ export const DATA = {
     { name: "TypeScript", icon: Typescript },
     { name: "Tailwind CSS", icon: Icons.tailwindcss },
     { name: "Framer Motion", icon: Icons.framermotion },
-    { name: "NestJS" },
-    { name: "Expo" },
-    { name: "Supabase" },
-    { name: "Firebase" },
-    { name: "MongoDB" },
-    { name: "Stripe" },
-    { name: "GCP" },
-    { name: "Swift" },
-    { name: "Kotlin" },
+    { name: "NestJS", logo: "/skills/nestjs.svg" },
+    { name: "Expo", logo: "/skills/expo.svg", invertInDark: true },
+    { name: "Supabase", logo: "/skills/supabase.svg" },
+    { name: "Firebase", logo: "/skills/firebase.svg" },
+    { name: "MongoDB", logo: "/skills/mongodb.svg" },
+    { name: "Stripe", logo: "/skills/stripe.svg" },
+    { name: "GCP", logo: "/skills/google-cloud.svg" },
+    { name: "Swift", logo: "/skills/swift.svg" },
+    { name: "Kotlin", logo: "/skills/kotlin.svg" },
     { name: "Java", icon: Java },
     { name: "Python", icon: Python },
   ],
@@ -63,7 +63,7 @@ export const DATA = {
     {
       company: "Upview Technologies",
       title: "Associate Software Engineer - Full Stack",
-      logoUrl: "",
+      logoUrl: "/companies/upview.png",
       start: "March 2025",
       end: "Present",
       description:
@@ -72,7 +72,7 @@ export const DATA = {
     {
       company: "Cloud99X",
       title: "Software Engineer - Intern",
-      logoUrl: "",
+      logoUrl: "/companies/cloud99x.png",
       start: "July 2023",
       end: "July 2024",
       description:
@@ -84,7 +84,8 @@ export const DATA = {
       school: "University of Westminster",
       href: "https://www.westminster.ac.uk",
       degree: "BEng (Hons) Software Engineering",
-      logoUrl: "",
+      logoUrl: "/education/westminster.png",
+      invertInDark: true,
       start: "2021",
       end: "2025",
     },
@@ -92,7 +93,7 @@ export const DATA = {
       school: "ICBT Campus",
       href: "https://icbt.lk",
       degree: "Diploma in English",
-      logoUrl: "",
+      logoUrl: "/education/icbt.png",
       start: "2021",
       end: "2021",
     },
@@ -105,10 +106,25 @@ export const DATA = {
       active: true,
       description:
         "A cloud-based image editing SaaS with AI generative fill, background removal, recolor and restoration, plus a payments and credits system.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Clerk", "MongoDB", "Stripe"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Clerk",
+        "MongoDB",
+        "Stripe",
+      ],
       links: [
-        { type: "Website", href: "https://image-platform-one.vercel.app/", icon: <Icons.globe className="size-3" /> },
-        { type: "Source", href: "https://github.com/TharushaRehan/image-platform", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Website",
+          href: "https://image-platform-one.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/image-platform",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/projects/ai-image-saas.png",
       video: "",
@@ -120,10 +136,25 @@ export const DATA = {
       active: true,
       description:
         "A Notion-inspired workspace for note-taking and organization with auth, a realtime database, image uploads and block-based editing.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Clerk", "Convex", "Edgestore"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Clerk",
+        "Convex",
+        "Edgestore",
+      ],
       links: [
-        { type: "Website", href: "https://tharusha-perera-notion-clone.vercel.app/", icon: <Icons.globe className="size-3" /> },
-        { type: "Source", href: "https://github.com/TharushaRehan/notion-clone", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Website",
+          href: "https://tharusha-perera-notion-clone.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/notion-clone",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/projects/notion-clone.png",
       video: "",
@@ -135,10 +166,24 @@ export const DATA = {
       active: true,
       description:
         "A modern UI library for React developers with responsive, customizable, interactive components and dark mode.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "MDX"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "MDX",
+      ],
       links: [
-        { type: "Website", href: "https://shinyui.vercel.app", icon: <Icons.globe className="size-3" /> },
-        { type: "Source", href: "https://github.com/TharushaRehan/shinyui", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Website",
+          href: "https://shinyui.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/shinyui",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/projects/shinyui.png",
       video: "",
@@ -148,11 +193,20 @@ export const DATA = {
       href: "https://saas-website-dark-tp.vercel.app/",
       dates: "",
       active: true,
-      description: "A sleek, modern landing page for a SaaS product, built from a Framer UI design.",
+      description:
+        "A sleek, modern landing page for a SaaS product, built from a Framer UI design.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       links: [
-        { type: "Website", href: "https://saas-website-dark-tp.vercel.app/", icon: <Icons.globe className="size-3" /> },
-        { type: "Source", href: "https://github.com/TharushaRehan/saas-website-dark", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Website",
+          href: "https://saas-website-dark-tp.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/saas-website-dark",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "",
       video: "",
@@ -162,11 +216,20 @@ export const DATA = {
       href: "https://blog-app-frontend-tp.vercel.app/",
       dates: "",
       active: true,
-      description: "A polished blog built from a Figma design with Next.js, Tailwind CSS and Framer Motion.",
+      description:
+        "A polished blog built from a Figma design with Next.js, Tailwind CSS and Framer Motion.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       links: [
-        { type: "Website", href: "https://blog-app-frontend-tp.vercel.app/", icon: <Icons.globe className="size-3" /> },
-        { type: "Source", href: "https://github.com/TharushaRehan/blog-app-frontend", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Website",
+          href: "https://blog-app-frontend-tp.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/blog-app-frontend",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/projects/blog-app-frontend.png",
       video: "",
@@ -180,7 +243,11 @@ export const DATA = {
         "A SwiftUI app inspired by Apple's Weather with real-time, location-based updates, forecasts and unit settings.",
       technologies: ["Swift", "SwiftUI", "OpenWeatherMap API"],
       links: [
-        { type: "Source", href: "https://github.com/TharushaRehan/ios-weather-app", icon: <Icons.github className="size-3" /> },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/ios-weather-app",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "",
       video: "",
