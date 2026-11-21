@@ -5,6 +5,9 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
+import FreelanceSection, {
+  AvailableDot,
+} from "@/components/section/freelance-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
@@ -30,6 +33,25 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <a
+                  href={DATA.contact.calUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border bg-background px-3 py-1 text-sm font-medium shadow-xs transition-colors hover:bg-muted"
+                >
+                  <AvailableDot />
+                  Available for freelance
+                  <span className="text-muted-foreground">·</span>
+                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                    Book a call
+                  </span>
+                  <ArrowUpRight
+                    className="size-3.5 text-muted-foreground group-hover:text-foreground transition-colors"
+                    aria-hidden
+                  />
+                </a>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
@@ -151,6 +173,11 @@ export default function Page() {
       <section id="projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />
+        </BlurFade>
+      </section>
+      <section id="freelance">
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
+          <FreelanceSection />
         </BlurFade>
       </section>
       <section id="contact">

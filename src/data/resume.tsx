@@ -14,7 +14,7 @@ export const DATA = {
     "Software Engineer building web and mobile apps people love. Full-stack with Next.js, React Native and TypeScript.",
   summary:
     "I'm a dedicated, detail-oriented Software Engineer with experience in [mobile and web application development](/#projects). I specialize in building user-friendly interfaces, scalable backend services and seamless integrations. I'm currently a full-stack engineer at Upview Technologies, after leading development as an intern at Cloud99X, and I hold a [BEng (Hons) in Software Engineering](/#education) from the University of Westminster. With strong problem-solving skills and leadership experience, I focus on shipping high-quality products that meet user needs and business goals.",
-  avatarUrl: "/profile-pic.jpeg",
+  avatarUrl: "/avatars/profile-pic-4.jpg",
   skills: [
     { name: "React Native", icon: ReactLight },
     { name: "React", icon: ReactLight },
@@ -37,6 +37,7 @@ export const DATA = {
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "tharushaperera088@gmail.com",
+    calUrl: "https://cal.com/tharusha-perera/30min",
     social: {
       GitHub: {
         name: "GitHub",
@@ -62,21 +63,36 @@ export const DATA = {
   work: [
     {
       company: "Upview Technologies",
-      title: "Associate Software Engineer - Full Stack",
       logoUrl: "/companies/upview.png",
-      start: "March 2025",
-      end: "Present",
-      description:
-        "Full-stack mobile and web development across frontend, backend and API integration with React Native, Next.js, TypeScript, Supabase, Razorpay, Stripe and GCP. Collaborated with cross-functional teams to deliver high-quality features and seamless integrations, taking ownership of projects end to end.",
+      positions: [
+        {
+          title: "Software Engineer - Full Stack",
+          start: "September 2025",
+          end: "Present",
+          description:
+            "Full-stack mobile and web development across frontend, backend and API integration with React Native, Next.js, TypeScript, Supabase, Razorpay, Stripe and GCP. Collaborate with cross-functional teams to deliver high-quality features and seamless integrations, taking ownership of projects end to end.",
+        },
+        {
+          title: "Associate Software Engineer - Full Stack",
+          start: "March 2025",
+          end: "August 2025",
+          description:
+            "Built features across mobile and web apps with React Native, Next.js and TypeScript, working on frontend, backend and API integrations alongside cross-functional teams.",
+        },
+      ],
     },
     {
       company: "Cloud99X",
-      title: "Software Engineer - Intern",
       logoUrl: "/companies/cloud99x.png",
-      start: "July 2023",
-      end: "July 2024",
-      description:
-        "Lead developer on the team, building mobile and web applications with advanced functionality using React Native, React.js, TypeScript, Firebase, NestJS and GCP. Delivered intuitive user interfaces, robust backend services and seamless integrations that met user requirements and business objectives.",
+      positions: [
+        {
+          title: "Software Engineer - Intern",
+          start: "July 2023",
+          end: "July 2024",
+          description:
+            "Lead developer on the team, building mobile and web applications with advanced functionality using React Native, React.js, TypeScript, Firebase, NestJS and GCP. Delivered intuitive user interfaces, robust backend services and seamless integrations that met user requirements and business objectives.",
+        },
+      ],
     },
   ],
   education: [

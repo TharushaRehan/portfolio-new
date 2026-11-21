@@ -33,7 +33,11 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 export default function WorkSection() {
   return (
     <Accordion type="single" collapsible className="w-full grid gap-6">
-      {DATA.work.map((work) => (
+      {DATA.work.map((work) => {
+        // positions are newest first
+        const latest = work.positions[0];
+        const first = work.positions[work.positions.length - 1];
+        return (
         <AccordionItem
           key={work.company}
           value={work.company}
@@ -65,22 +69,41 @@ export default function WorkSection() {
                     </span>
                   </div>
                   <div className="font-sans text-sm text-muted-foreground">
-                    {work.title}
+                    {latest.title}
+                    {work.positions.length > 1 &&
+                      ` · ${work.positions.length} roles`}
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
                 <span>
-                  {work.start} - {work.end ?? "Present"}
+                  {first.start} - {latest.end}
                 </span>
               </div>
             </div>
           </AccordionTrigger>
           <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
-            {work.description}
+            <ol className="border-l border-border ml-1 pt-1 grid gap-5">
+              {work.positions.map((position) => (
+                <li key={position.title} className="relative pl-5">
+                  <span
+                    aria-hidden
+                    className="absolute -left-[5px] top-1 size-2.5 rounded-full border-2 border-background bg-muted-foreground ring-1 ring-border"
+                  />
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                    <p className="font-medium text-foreground">{position.title}</p>
+                    <p className="text-xs tabular-nums">
+                      {position.start} - {position.end}
+                    </p>
+                  </div>
+                  <p className="mt-1">{position.description}</p>
+                </li>
+              ))}
+            </ol>
           </AccordionContent>
         </AccordionItem>
-      ))}
+        );
+      })}
     </Accordion>
   );
 }
