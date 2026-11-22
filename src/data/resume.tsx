@@ -75,7 +75,7 @@ export const DATA = {
         {
           title: "Associate Software Engineer - Full Stack",
           start: "March 2025",
-          end: "August 2025",
+          end: "October 2025",
           description:
             "Built features across mobile and web apps with React Native, Next.js and TypeScript, working on frontend, backend and API integrations alongside cross-functional teams.",
         },
@@ -99,22 +99,53 @@ export const DATA = {
     {
       school: "University of Westminster",
       href: "https://www.westminster.ac.uk",
-      degree: "BEng (Hons) Software Engineering",
+      degree: "BEng (Hons) in Software Engineering",
       logoUrl: "/education/westminster.png",
       invertInDark: true,
-      start: "2021",
-      end: "2025",
+      start: "September 2021",
+      end: "September 2025",
     },
     {
       school: "ICBT Campus",
       href: "https://icbt.lk",
       degree: "Diploma in English",
       logoUrl: "/education/icbt.png",
-      start: "2021",
-      end: "2021",
+      start: "July 2021",
+      end: "July 2021",
     },
   ],
   projects: [
+    {
+      title: "Nym",
+      href: "https://nym-chat.vercel.app",
+      dates: "",
+      active: true,
+      description:
+        "A private, real-time chat app with self-destructing rooms. Create a room, share the link and chat with anonymous identities; rooms expire after 10 minutes or can be destroyed instantly.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Elysia",
+        "Upstash Redis",
+        "Upstash Realtime",
+        "React Query",
+        "Tailwind CSS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://nym-chat.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/TharushaRehan/realtime-chat",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/nym.jpg",
+      video: "",
+    },
     {
       title: "AI Image SaaS Platform",
       href: "https://image-platform-one.vercel.app/",
@@ -146,12 +177,12 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Notion Clone",
-      href: "https://tharusha-perera-notion-clone.vercel.app/",
+      title: "Pagewise",
+      href: "https://app-pagewise.vercel.app",
       dates: "",
       active: true,
       description:
-        "A Notion-inspired workspace for note-taking and organization with auth, a realtime database, image uploads and block-based editing.",
+        "A Notion-style workspace for notes and docs with block-based editing, a realtime database, image uploads and file management, plus sign-in with Clerk.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -205,8 +236,8 @@ export const DATA = {
       video: "",
     },
     {
-      title: "SaaS Landing Page - Dark Theme",
-      href: "https://saas-website-dark-tp.vercel.app/",
+      title: "SaaS Landing Page - Light Theme",
+      href: "https://saas-website-light.vercel.app/",
       dates: "",
       active: true,
       description:
@@ -215,39 +246,16 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://saas-website-dark-tp.vercel.app/",
+          href: "https://saas-website-light.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/TharushaRehan/saas-website-dark",
+          href: "https://github.com/TharushaRehan/saas-website-light",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Blog Application",
-      href: "https://blog-app-frontend-tp.vercel.app/",
-      dates: "",
-      active: true,
-      description:
-        "A polished blog built from a Figma design with Next.js, Tailwind CSS and Framer Motion.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      links: [
-        {
-          type: "Website",
-          href: "https://blog-app-frontend-tp.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/TharushaRehan/blog-app-frontend",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/blog-app-frontend.png",
+      image: "/projects/saas-landing-page-light.jpg",
       video: "",
     },
     {
